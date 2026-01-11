@@ -1,16 +1,38 @@
-## Hi there 👋
+# 🏥 NMH Hospital
 
-<!--
-**Nmhhospital/nmhhospital** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**24/7 Maternity & Emergency Care**
 
-Here are some ideas to get you started:
+NMH Hospital is committed to providing quality healthcare with experienced doctors, modern facilities, and compassionate patient care.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## 🩺 Our Services
+- 24/7 Maternity Services
+- Surgical Care
+- Laboratory Facilities
+- In-house Pharmacy
+- Emergency Medical Services
+
+---
+
+## 📍 Address
+**NMH Hospital**  
+No.2941, Oosi Toopu,  
+Behind Nethaji Nagar,  
+Eidgha, Amburpet,  
+Vaniyambadi, Valayambattu,  
+Tamil Nadu – 635752  
+
+---
+
+## 🌐 Official Website
+👉 https://nmhhospital.github.io/nmhhospital/
+
+---
+
+## 📞 Contact
+For appointments and emergency care, please visit our website.
+
+---
+
+⭐ *Dedicated to your health and well-being*
