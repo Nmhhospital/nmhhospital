@@ -1,114 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>NMH Hospital | Vaniyambadi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>NMH Hospital | Vaniyambadi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f8fb;
-      color: #222;
-    }
+<style>
+body{
+  margin:0;
+  font-family:"Segoe UI", Arial, sans-serif;
+  background:#eef2f7;
+  color:#222;
+}
 
-    header {
-      background: #0a5ea8;
-      color: #fff;
-      text-align: center;
-      padding: 20px 10px;
-    }
+header{
+  background:#0b5fa5;
+  color:white;
+  text-align:center;
+  padding:35px 15px;
+}
 
-    header img {
-      width: 120px;
-      height: auto;
-      margin-bottom: 10px;
-    }
+header img{
+  width:150px;
+  margin-bottom:10px;
+}
 
-    section {
-      padding: 20px;
-    }
+header h1{
+  margin:5px 0;
+  font-size:32px;
+}
 
-    .card {
-      background: #fff;
-      padding: 18px;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
+header p{
+  margin:0;
+  font-size:16px;
+  opacity:0.9;
+}
 
-    h2 {
-      color: #0a5ea8;
-      margin-top: 0;
-    }
+/* Language Buttons */
+.lang-buttons{
+  margin-top:15px;
+}
 
-    img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 12px;
-    }
+.lang-buttons button{
+  background:white;
+  color:#0b5fa5;
+  border:none;
+  padding:8px 16px;
+  margin:5px;
+  border-radius:20px;
+  font-weight:600;
+  cursor:pointer;
+}
 
-    video {
-      width: 100%;
-      border-radius: 10px;
-    }
+.lang-buttons button.active{
+  background:#ffcc00;
+  color:#000;
+}
 
-    ul {
-      padding-left: 20px;
-    }
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:25px 15px;
+}
 
-    li {
-      margin-bottom: 6px;
-    }
+.card{
+  background:white;
+  padding:30px;
+  margin-bottom:30px;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
 
-    .button {
-      display: inline-block;
-      background: #0a5ea8;
-      color: #fff;
-      padding: 12px 18px;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 10px;
-    }
+.card h2{
+  color:#0b5fa5;
+  margin-top:0;
+  font-size:26px;
+}
 
-    .urdu {
-      direction: rtl;
-      text-align: right;
-      font-family: "Noto Nastaliq Urdu", serif;
-    }
+.lang{
+  display:none;
+  line-height:1.7;
+}
 
-    footer {
-      background: #03396c;
-      color: white;
-      text-align: center;
-      padding: 12px;
-      font-size: 14px;
-    }
-  </style>
+.lang.active{
+  display:block;
+}
+
+.urdu{
+  direction:rtl;
+  text-align:right;
+}
+
+ul{
+  padding-left:20px;
+}
+
+li{
+  margin-bottom:8px;
+}
+
+.photos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+.photos img{
+  width:100%;
+  border-radius:12px;
+}
+
+video{
+  width:100%;
+  border-radius:12px;
+  background:black;
+}
+
+.button{
+  display:inline-block;
+  background:#0b5fa5;
+  color:white;
+  padding:12px 20px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+  margin-top:10px;
+}
+
+footer{
+  background:#083d6b;
+  color:white;
+  text-align:center;
+  padding:15px;
+  font-size:14px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-  <img src="logo.jpg" alt="NMH Hospital Logo">
+  <img src="logo.png" alt="NMH Hospital Logo">
   <h1>NMH HOSPITAL</h1>
   <p>24/7 Maternity & Emergency Care</p>
+
+  <!-- LANGUAGE BUTTONS -->
+  <div class="lang-buttons">
+    <button class="active" onclick="setLang('en')">English</button>
+    <button onclick="setLang('ta')">தமிழ்</button>
+    <button onclick="setLang('ur')">اردو</button>
+  </div>
 </header>
 
+<div class="container">
+
 <!-- ABOUT -->
-<section class="card">
-  <h2>About NMH Hospital</h2>
+<div class="card">
+<h2>About NMH Hospital</h2>
 
-  <p><b>English:</b><br>
-    NMH Hospital is a trusted multi-specialty healthcare center located in
-    Vaniyambadi, Tirupattur District. We provide quality, affordable and
-    compassionate medical care.
-  </p>
+<div class="lang en active">
+NMH Hospital is a trusted multi-specialty healthcare center located in
+Vaniyambadi, Tirupattur District. We provide quality, affordable and
+compassionate medical care.
+</div>
 
-  <p><b>தமிழ்:</b><br>
-    NMH மருத்துவமனை, திருப்பத்தூர் மாவட்டம் வாணியம்பாடியில் அமைந்துள்ள
+<div class="lang ta">
+NMH மருத்துவமனை, திருப்பத்தூர் மாவட்டம் வாணியம்பாடியில் அமைந்துள்ள
+நம்பகமான பல்துறை மருத்துவமையாகும். தரமான மற்றும் மனிதநேய மருத்துவ
+சேவைகளை வழங்குகிறோம்.
+</div>
+
+<div class="lang ur urdu">
+این ایم ایچ ہسپتال وانیامباڈی، ضلع تیرپتور میں واقع ایک قابلِ اعتماد
+ملٹی اسپیشلٹی ہسپتال ہے۔ ہم معیاری اور ہمدردانہ طبی خدمات فراہم کرتے ہیں۔
+</div>
+</div>
+
+<!-- SERVICES -->
+<div class="card">
+<h2>Our Services</h2>
+
+<div class="lang en active">
+<ul>
+<li>24/7 Maternity & Normal Delivery</li>
+<li>Emergency Care</li>
+<li>General Surgery & Urology</li>
+<li>ENT & Orthopaedics</li>
+<li>Laboratory Services</li>
+<li>In-house Pharmacy</li>
+</ul>
+</div>
+
+<div class="lang ta">
+<ul>
+<li>24/7 தாய்மை சேவை & இயற்கை பிரசவம்</li>
+<li>அவசர சிகிச்சை</li>
+<li>பொது அறுவை சிகிச்சை & யூராலஜி</li>
+<li>காது, மூக்கு, தொண்டை & எலும்பியல்</li>
+<li>ஆய்வக சேவைகள்</li>
+<li>உள்ளமைந்த மருந்தகம்</li>
+</ul>
+</div>
+
+<div class="lang ur urdu">
+<ul>
+<li>24/7 زچگی اور نارمل ڈیلیوری</li>
+<li>ایمرجنسی سہولیات</li>
+<li>جنرل سرجری اور یورولوجی</li>
+<li>ناک، کان، گلا اور ہڈیوں کا علاج</li>
+<li>لیبارٹری خدمات</li>
+<li>فارمیسی</li>
+</ul>
+</div>
+</div>
+
+<!-- PHOTOS -->
+<div class="card">
+<h2>Hospital Photos</h2>
+<div class="photos">
+  <img src="hospital1.jpg" alt="Hospital Front">
+  <img src="hospital2.jpg" alt="Hospital Interior">
+</div>
+</div>
+
+<!-- VIDEO -->
+<div class="card">
+<h2>Hospital Video</h2>
+<video controls playsinline preload="metadata" poster="hospital1.jpg">
+  <source src="hospital.mp4" type="video/mp4">
+  Your browser does not support video.
+</video>
+</div>
+
+<!-- ADDRESS -->
+<div class="card">
+<h2>Address</h2>
+
+<div class="lang en active">
+No.2941, Oosi Toopu, Behind Nethaji Nagar,<br>
+Eidgha, Amburpet, Vaniyambadi – 635752
+</div>
+
+<div class="lang ta">
+எண்.2941, ஊசி தூப்பு, நேதாஜி நகர் பின்னால்,<br>
+ஈத்கா, அம்பூர்பேட்டை, வாணியம்பாடி – 635752
+</div>
+
+<div class="lang ur urdu">
+نمبر 2941، اوسی ٹوپو، نیتاجی نگر کے پیچھے،<br>
+عیدگاہ، امبورپیٹ، وانیامباڈی – 635752
+</div>
+</div>
+
+<!-- LOCATION -->
+<div class="card">
+<h2>Location</h2>
+<iframe
+  src="https://www.google.com/maps?q=NMH+Hospital+Vaniyambadi&output=embed"
+  width="100%" height="280"
+  style="border:0;border-radius:12px;"
+  loading="lazy">
+</iframe>
+<br><br>
+<a class="button" href="https://maps.app.goo.gl/wxATGkJgTXDfDRpy7">Get Directions</a>
+</div>
+
+<!-- CONTACT -->
+<div class="card">
+<h2>Contact</h2>
+
+<div class="lang en active">
+Hospital: 9043155002<br>
+Ismail Basha: 8217349156
+</div>
+
+<div class="lang ta">
+மருத்துவமனை: 9043155002<br>
+இஸ்மாயில் பாஷா: 8217349156
+</div>
+
+<div class="lang ur urdu">
+ہسپتال: 9043155002<br>
+اسماعیل باشا: 8217349156
+</div>
+
+<a class="button" href="tel:9043155002">Call Now</a>
+</div>
+
+</div>
+
+<footer>
+© 2026 NMH Hospital | Caring for Life
+</footer>
+
+<script>
+function setLang(lang){
+  document.querySelectorAll('.lang').forEach(el=>{
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('.'+lang).forEach(el=>{
+    el.classList.add('active');
+  });
+
+  document.querySelectorAll('.lang-buttons button').forEach(btn=>{
+    btn.classList.remove('active');
+  });
+  event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>    NMH மருத்துவமனை, திருப்பத்தூர் மாவட்டம் வாணியம்பாடியில் அமைந்துள்ள
     நம்பகமான பல்துறை மருத்துவமையாகும். தரமான மற்றும் மனிதநேய மருத்துவ
     சேவைகளை வழங்குகிறோம்.
   </p>
