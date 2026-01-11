@@ -13,39 +13,37 @@ body{
   color:#222;
 }
 
+/* HEADER */
 header{
   background:#0b5fa5;
   color:white;
   text-align:center;
-  padding:35px 15px;
+  padding:40px 15px;
 }
 
-header img{
-  width:150px;
-  margin-bottom:10px;
-}
-
-header h1{
-  margin:5px 0;
-  font-size:32px;
+/* TEXT LOGO */
+.logo-text{
+  font-size:36px;
+  font-weight:700;
+  letter-spacing:2px;
 }
 
 header p{
-  margin:0;
+  margin-top:8px;
   font-size:16px;
   opacity:0.9;
 }
 
-/* Language Buttons */
+/* LANGUAGE BUTTONS */
 .lang-buttons{
-  margin-top:15px;
+  margin-top:20px;
 }
 
 .lang-buttons button{
   background:white;
   color:#0b5fa5;
   border:none;
-  padding:8px 16px;
+  padding:8px 18px;
   margin:5px;
   border-radius:20px;
   font-weight:600;
@@ -60,26 +58,27 @@ header p{
 .container{
   max-width:1200px;
   margin:auto;
-  padding:25px 15px;
+  padding:30px 15px;
 }
 
 .card{
   background:white;
-  padding:30px;
-  margin-bottom:30px;
-  border-radius:14px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  padding:35px;
+  margin-bottom:35px;
+  border-radius:16px;
+  box-shadow:0 8px 22px rgba(0,0,0,0.08);
 }
 
 .card h2{
   color:#0b5fa5;
   margin-top:0;
-  font-size:26px;
+  font-size:28px;
 }
 
 .lang{
   display:none;
-  line-height:1.7;
+  line-height:1.8;
+  font-size:16px;
 }
 
 .lang.active{
@@ -91,23 +90,203 @@ header p{
   text-align:right;
 }
 
-ul{
-  padding-left:20px;
-}
-
-li{
-  margin-bottom:8px;
-}
-
+/* IMAGES */
 .photos{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
 }
 
 .photos img{
   width:100%;
-  border-radius:12px;
+  border-radius:14px;
+}
+
+/* VIDEO */
+video{
+  width:100%;
+  border-radius:14px;
+  background:black;
+}
+
+/* BUTTON */
+.button{
+  display:inline-block;
+  background:#0b5fa5;
+  color:white;
+  padding:14px 24px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  margin-top:15px;
+}
+
+footer{
+  background:#083d6b;
+  color:white;
+  text-align:center;
+  padding:18px;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-text">NMH HOSPITAL</div>
+  <p>24/7 Maternity & Emergency Care</p>
+
+  <div class="lang-buttons">
+    <button class="active" onclick="setLang('en')">English</button>
+    <button onclick="setLang('ta')">தமிழ்</button>
+    <button onclick="setLang('ur')">اردو</button>
+  </div>
+</header>
+
+<div class="container">
+
+<!-- ABOUT -->
+<div class="card">
+<h2>About NMH Hospital</h2>
+
+<div class="lang en active">
+NMH Hospital is a trusted multi-specialty healthcare center located in
+Vaniyambadi, Tirupattur District. We provide quality, affordable and
+compassionate medical care with modern facilities.
+</div>
+
+<div class="lang ta">
+NMH மருத்துவமனை, திருப்பத்தூர் மாவட்டம் வாணியம்பாடியில் அமைந்துள்ள
+நம்பகமான பல்துறை மருத்துவமையாகும். நவீன வசதிகளுடன் தரமான மற்றும்
+மனிதநேய மருத்துவ சேவைகளை வழங்குகிறோம்.
+</div>
+
+<div class="lang ur urdu">
+این ایم ایچ ہسپتال وانیامباڈی، ضلع تیرپتور میں واقع ایک قابلِ اعتماد
+ملٹی اسپیشلٹی ہسپتال ہے۔ ہم جدید سہولیات کے ساتھ معیاری اور ہمدردانہ
+طبی خدمات فراہم کرتے ہیں۔
+</div>
+</div>
+
+<!-- SERVICES -->
+<div class="card">
+<h2>Our Services</h2>
+
+<div class="lang en active">
+• 24/7 Maternity & Normal Delivery<br>
+• Emergency Care<br>
+• General Surgery & Urology<br>
+• ENT & Orthopaedics<br>
+• Laboratory Services<br>
+• In-house Pharmacy
+</div>
+
+<div class="lang ta">
+• 24/7 தாய்மை சேவை & இயற்கை பிரசவம்<br>
+• அவசர சிகிச்சை<br>
+• பொது அறுவை சிகிச்சை & யூராலஜி<br>
+• காது, மூக்கு, தொண்டை & எலும்பியல்<br>
+• ஆய்வக சேவைகள்<br>
+• உள்ளமைந்த மருந்தகம்
+</div>
+
+<div class="lang ur urdu">
+• 24/7 زچگی اور نارمل ڈیلیوری<br>
+• ایمرجنسی سہولیات<br>
+• جنرل سرجری اور یورولوجی<br>
+• ناک، کان، گلا اور ہڈیوں کا علاج<br>
+• لیبارٹری خدمات<br>
+• فارمیسی
+</div>
+</div>
+
+<!-- PHOTOS -->
+<div class="card">
+<h2>Hospital Gallery</h2>
+<div class="photos">
+  <img src="nmh.jpg" alt="NMH Hospital">
+  <img src="nmgv.jpg" alt="NMH Hospital View">
+  <img src="NMH.f" alt="NMH Facility">
+</div>
+</div>
+
+<!-- VIDEO -->
+<div class="card">
+<h2>Hospital Video</h2>
+<video controls playsinline preload="metadata">
+  <source src="nmhh.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</div>
+
+<!-- ADDRESS -->
+<div class="card">
+<h2>Address</h2>
+
+<div class="lang en active">
+No.2941, Oosi Toopu, Behind Nethaji Nagar,<br>
+Eidgha, Amburpet, Vaniyambadi – 635752
+</div>
+
+<div class="lang ta">
+எண்.2941, ஊசி தூப்பு, நேதாஜி நகர் பின்னால்,<br>
+ஈத்கா, அம்பூர்பேட்டை, வாணியம்பாடி – 635752
+</div>
+
+<div class="lang ur urdu">
+نمبر 2941، اوسی ٹوپو، نیتاجی نگر کے پیچھے،<br>
+عیدگاہ، امبورپیٹ، وانیامباڈی – 635752
+</div>
+</div>
+
+<!-- CONTACT -->
+<div class="card">
+<h2>Contact</h2>
+
+<div class="lang en active">
+Hospital: 9043155002<br>
+Ismail Basha: 8217349156
+</div>
+
+<div class="lang ta">
+மருத்துவமனை: 9043155002<br>
+இஸ்மாயில் பாஷா: 8217349156
+</div>
+
+<div class="lang ur urdu">
+ہسپتال: 9043155002<br>
+اسماعیل باشا: 8217349156
+</div>
+
+<a class="button" href="tel:9043155002">Call Now</a>
+</div>
+
+</div>
+
+<footer>
+© 2026 NMH Hospital | Caring for Life
+</footer>
+
+<script>
+function setLang(lang){
+  document.querySelectorAll('.lang').forEach(el=>{
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('.'+lang).forEach(el=>{
+    el.classList.add('active');
+  });
+
+  document.querySelectorAll('.lang-buttons button').forEach(btn=>{
+    btn.classList.remove('active');
+  });
+  event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>  border-radius:12px;
 }
 
 video{
