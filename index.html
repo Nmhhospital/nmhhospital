@@ -8,29 +8,44 @@
 <style>
 body{
   margin:0;
-  font-family: Arial, sans-serif;
+  font-family:Arial, sans-serif;
   background:#f2f5f8;
   color:#333;
 }
+
+/* HEADER */
 header{
   background:#0b5fa5;
   color:#fff;
   text-align:center;
-  padding:25px 15px;
+  padding:20px 15px;
 }
+
+.logo{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  object-fit:cover;
+  background:#fff;
+  padding:6px;
+}
+
 .logo-text{
-  font-size:28px;
+  font-size:26px;
   font-weight:bold;
-  letter-spacing:1px;
+  margin-top:10px;
 }
+
 .tagline{
   font-size:14px;
   opacity:0.9;
-  margin-top:5px;
 }
+
+/* LANGUAGE BUTTONS */
 .lang-buttons{
-  margin-top:15px;
+  margin-top:12px;
 }
+
 .lang-buttons button{
   border:none;
   padding:6px 14px;
@@ -41,11 +56,14 @@ header{
   color:#0b5fa5;
   font-weight:bold;
 }
+
+/* LAYOUT */
 .container{
-  max-width:1200px;
+  max-width:1100px;
   margin:auto;
   padding:15px;
 }
+
 .card{
   background:#fff;
   border-radius:12px;
@@ -53,6 +71,7 @@ header{
   margin-bottom:18px;
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
+
 .card h2{
   margin-top:0;
   color:#0b5fa5;
@@ -60,29 +79,38 @@ header{
   border-bottom:1px solid #e0e0e0;
   padding-bottom:8px;
 }
+
+/* PHOTOS */
 .photos{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:12px;
 }
+
 .photos img{
   width:100%;
   border-radius:10px;
 }
+
+/* VIDEO */
 video{
   width:100%;
   border-radius:10px;
   background:#000;
 }
+
+/* BUTTON */
 .call-btn{
   display:inline-block;
   background:#0b5fa5;
   color:#fff;
-  padding:10px 18px;
+  padding:12px 22px;
   border-radius:8px;
   text-decoration:none;
   font-weight:bold;
 }
+
+/* FOOTER */
 footer{
   background:#0b5fa5;
   color:#fff;
@@ -91,14 +119,16 @@ footer{
   font-size:13px;
 }
 
-/* language control */
+/* LANGUAGE CONTROL */
 .lang{display:none;}
 .lang.active{display:block;}
 </style>
 
 <script>
 function setLang(lang){
-  document.querySelectorAll('.lang').forEach(el=>el.classList.remove('active'));
+  document.querySelectorAll('.lang').forEach(el=>{
+    el.classList.remove('active');
+  });
   document.getElementById(lang).classList.add('active');
 }
 </script>
@@ -107,7 +137,110 @@ function setLang(lang){
 <body>
 
 <header>
+  <img src="nmhlogo.jpg" alt="NMH Hospital Logo" class="logo">
   <div class="logo-text">NMH HOSPITAL</div>
+  <div class="tagline">24/7 Maternity & Emergency Care</div>
+
+  <div class="lang-buttons">
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('ta')">தமிழ்</button>
+    <button onclick="setLang('ur')">اردو</button>
+  </div>
+</header>
+
+<div class="container">
+
+<!-- ENGLISH -->
+<div id="en" class="lang active">
+
+<div class="card">
+<h2>About NMH Hospital</h2>
+<p>
+NMH Hospital is a trusted multi-specialty healthcare center located in
+Vaniyambadi, Tirupattur District. We provide affordable, compassionate
+and quality medical care for all.
+</p>
+</div>
+
+<div class="card">
+<h2>Our Services</h2>
+<ul>
+<li>24/7 Maternity & Normal Delivery</li>
+<li>Emergency Care</li>
+<li>General Surgery & Urology</li>
+<li>ENT & Orthopaedics</li>
+<li>Laboratory Services</li>
+<li>In-house Pharmacy</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Hospital Photos</h2>
+<div class="photos">
+  <img src="nmh.jpg" alt="NMH Hospital">
+  <img src="nmhv.jpg" alt="Hospital View">
+</div>
+</div>
+
+<div class="card">
+<h2>Hospital Video</h2>
+<video controls playsinline preload="metadata">
+  <source src="nmhh.mp4" type="video/mp4">
+  Your browser does not support the video.
+</video>
+</div>
+
+<div class="card">
+<h2>Address</h2>
+<p>
+No.2941, Oosi Toopu,<br>
+Behind Nethaji Nagar,<br>
+Eidgha, Amburpet,<br>
+Vaniyambadi – 635752
+</p>
+</div>
+
+<div class="card">
+<h2>Contact</h2>
+<p>
+📞 Hospital: <b>9043155002</b><br>
+📞 Ismail Basha: <b>8217349156</b>
+</p>
+<a class="call-btn" href="tel:9043155002">Call Now</a>
+</div>
+
+</div>
+
+<!-- TAMIL -->
+<div id="ta" class="lang">
+<div class="card">
+<h2>NMH மருத்துவமனை</h2>
+<p>
+NMH மருத்துவமனை வாணியம்பாடியில் அமைந்துள்ள
+நம்பகமான பல்துறை மருத்துவமனையாகும்.
+</p>
+</div>
+</div>
+
+<!-- URDU -->
+<div id="ur" class="lang">
+<div class="card">
+<h2>این ایم ایچ ہسپتال</h2>
+<p>
+این ایم ایچ ہسپتال وانیامباڈی میں واقع ایک معتبر
+ملٹی اسپیشلٹی طبی مرکز ہے۔
+</p>
+</div>
+</div>
+
+</div>
+
+<footer>
+© 2026 NMH Hospital | Caring for Life
+</footer>
+
+</body>
+</html>  <div class="logo-text">NMH HOSPITAL</div>
   <div class="tagline">24/7 Maternity & Emergency Care</div>
 
   <div class="lang-buttons">
