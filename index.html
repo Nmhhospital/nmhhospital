@@ -18,16 +18,16 @@ header{
   background:#0b5fa5;
   color:#fff;
   text-align:center;
-  padding:20px 15px;
+  padding:22px 15px;
 }
 
 .logo{
-  width:80px;
-  height:80px;
-  border-radius:50%;
-  object-fit:cover;
+  width:90px;
+  max-width:90%;
+  height:auto;
   background:#fff;
   padding:6px;
+  border-radius:50%;
 }
 
 .logo-text{
@@ -83,12 +83,14 @@ header{
 /* PHOTOS */
 .photos{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:12px;
 }
 
 .photos img{
   width:100%;
+  height:260px;
+  object-fit:cover;
   border-radius:10px;
 }
 
@@ -154,340 +156,83 @@ function setLang(lang){
 <div id="en" class="lang active">
 
 <div class="card">
-<h2>About NMH Hospital</h2>
-<p>
-NMH Hospital is a trusted multi-specialty healthcare center located in
-Vaniyambadi, Tirupattur District. We provide affordable, compassionate
-and quality medical care for all.
-</p>
+  <h2>About NMH Hospital</h2>
+  <p>
+    NMH Hospital is a trusted multi-specialty healthcare center located in
+    Vaniyambadi, Tirupattur District. We provide affordable, compassionate,
+    and quality medical care for all.
+  </p>
 </div>
 
 <div class="card">
-<h2>Our Services</h2>
-<ul>
-<li>24/7 Maternity & Normal Delivery</li>
-<li>Emergency Care</li>
-<li>General Surgery & Urology</li>
-<li>ENT & Orthopaedics</li>
-<li>Laboratory Services</li>
-<li>In-house Pharmacy</li>
-</ul>
+  <h2>Our Services</h2>
+  <ul>
+    <li>24/7 Maternity & Normal Delivery</li>
+    <li>Emergency Care</li>
+    <li>General Surgery & Urology</li>
+    <li>ENT & Orthopaedics</li>
+    <li>Laboratory Services</li>
+    <li>In-house Pharmacy</li>
+  </ul>
 </div>
 
 <div class="card">
-<h2>Hospital Photos</h2>
-<div class="photos">
-  <img src="nmh.jpg" alt="NMH Hospital">
-  <img src="nmhv.jpg" alt="Hospital View">
-</div>
-</div>
-
-<div class="card">
-<h2>Hospital Video</h2>
-<video controls playsinline preload="metadata">
-  <source src="nmhh.mp4" type="video/mp4">
-  Your browser does not support the video.
-</video>
+  <h2>Hospital Photos</h2>
+  <div class="photos">
+    <img src="nmh-operation-theatre.jpg" alt="NMH Hospital Operation Theatre">
+    <img src="nmh-maternity-ward.jpg" alt="NMH Hospital Maternity Ward">
+  </div>
 </div>
 
 <div class="card">
-<h2>Address</h2>
-<p>
-No.2941, Oosi Toopu,<br>
-Behind Nethaji Nagar,<br>
-Eidgha, Amburpet,<br>
-Vaniyambadi – 635752
-</p>
+  <h2>Hospital Video</h2>
+  <video controls playsinline preload="none">
+    <source src="nmh-hospital-tour.mp4" type="video/mp4">
+    Your browser does not support the video.
+  </video>
 </div>
 
 <div class="card">
-<h2>Contact</h2>
-<p>
-📞 Hospital: <b>9043155002</b><br>
-📞 Ismail Basha: <b>8217349156</b>
-</p>
-<a class="call-btn" href="tel:9043155002">Call Now</a>
+  <h2>Address</h2>
+  <p>
+    No.2941, Oosi Toopu,<br>
+    Behind Nethaji Nagar,<br>
+    Eidgha, Amburpet,<br>
+    Vaniyambadi – 635752
+  </p>
+</div>
+
+<div class="card">
+  <h2>Contact</h2>
+  <p>
+    📞 Hospital: <b>9043155002</b><br>
+    📞 Ismail Basha: <b>8217349156</b>
+  </p>
+  <a class="call-btn" href="tel:9043155002">Call Now</a>
 </div>
 
 </div>
 
 <!-- TAMIL -->
 <div id="ta" class="lang">
-<div class="card">
-<h2>NMH மருத்துவமனை</h2>
-<p>
-NMH மருத்துவமனை வாணியம்பாடியில் அமைந்துள்ள
-நம்பகமான பல்துறை மருத்துவமனையாகும்.
-</p>
-</div>
+  <div class="card">
+    <h2>NMH மருத்துவமனை</h2>
+    <p>
+      NMH மருத்துவமனை வாணியம்பாடியில் அமைந்துள்ள
+      நம்பகமான பல்துறை மருத்துவமனையாகும்.
+    </p>
+  </div>
 </div>
 
 <!-- URDU -->
 <div id="ur" class="lang">
-<div class="card">
-<h2>این ایم ایچ ہسپتال</h2>
-<p>
-این ایم ایچ ہسپتال وانیامباڈی میں واقع ایک معتبر
-ملٹی اسپیشلٹی طبی مرکز ہے۔
-</p>
-</div>
-</div>
-
-</div>
-
-<footer>
-© 2026 NMH Hospital | Caring for Life
-</footer>
-
-</body>
-</html>  <div class="logo-text">NMH HOSPITAL</div>
-  <div class="tagline">24/7 Maternity & Emergency Care</div>
-
-  <div class="lang-buttons">
-    <button onclick="setLang('en')">English</button>
-    <button onclick="setLang('ta')">தமிழ்</button>
-    <button onclick="setLang('ur')">اردو</button>
+  <div class="card">
+    <h2>این ایم ایچ ہسپتال</h2>
+    <p>
+      این ایم ایچ ہسپتال وانیامباڈی میں واقع ایک معتبر
+      ملٹی اسپیشلٹی طبی مرکز ہے۔
+    </p>
   </div>
-</header>
-
-<div class="container">
-
-<!-- ENGLISH -->
-<div id="en" class="lang active">
-
-<div class="card">
-<h2>About NMH Hospital</h2>
-<p>
-NMH Hospital is a trusted multi-specialty healthcare center located in
-Vaniyambadi, Tirupattur District. We provide affordable, compassionate and
-quality medical care for all.
-</p>
-</div>
-
-<div class="card">
-<h2>Our Services</h2>
-<ul>
-<li>24/7 Maternity & Normal Delivery</li>
-<li>Emergency Care</li>
-<li>General Surgery & Urology</li>
-<li>ENT & Orthopaedics</li>
-<li>Laboratory Services</li>
-<li>In-house Pharmacy</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Hospital Photos</h2>
-<div class="photos">
-<img src="nmh.jpg" alt="NMH Hospital">
-<img src="nmgv.jpg" alt="Hospital View">
-<img src="NMH.jpg" alt="Hospital Facility">
-</div>
-</div>
-
-<div class="card">
-<h2>Hospital Video</h2>
-<video controls playsinline preload="metadata">
-  <source src="nmhh.mp4" type="video/mp4">
-  Your browser does not support video.
-</video>
-</div>
-
-<div class="card">
-<h2>Address</h2>
-<p>
-No.2941, Oosi Toopu,<br>
-Behind Nethaji Nagar,<br>
-Eidgha, Amburpet,<br>
-Vaniyambadi – 635752
-</p>
-</div>
-
-<div class="card">
-<h2>Contact</h2>
-<p>📞 Hospital: <b>9043155002</b><br>
-📞 Ismail Basha: <b>8217349156</b></p>
-<a class="call-btn" href="tel:9043155002">Call Now</a>
-</div>
-
-</div>
-
-<!-- TAMIL -->
-<div id="ta" class="lang">
-<div class="card">
-<h2>NMH மருத்துவமனை பற்றி</h2>
-<p>
-வாணியம்பாடியில் அமைந்துள்ள NMH மருத்துவமனை
-நம்பகமான பல்துறை மருத்துவ சேவைகளை வழங்குகிறது.
-</p>
-</div>
-</div>
-
-<!-- URDU -->
-<div id="ur" class="lang">
-<div class="card">
-<h2>این ایم ایچ ہسپتال</h2>
-<p>
-این ایم ایچ ہسپتال وانیامباڈی میں واقع ایک معتبر
-ملٹی اسپیشلٹی طبی مرکز ہے۔
-</p>
-</div>
-</div>
-
-</div>
-
-<footer>
-© 2026 NMH Hospital | Caring for Life
-</footer>
-
-</body>
-</html>  border-radius:12px;
-  background:black;
-}
-
-/* BUTTON */
-.button{
-  display:inline-block;
-  background:#0b5fa5;
-  color:white;
-  padding:12px 22px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:600;
-  margin-top:10px;
-}
-
-/* FOOTER */
-footer{
-  background:#083d6b;
-  color:white;
-  text-align:center;
-  padding:18px;
-  font-size:14px;
-}
-</style>
-
-<script>
-function setLang(lang){
-  document.querySelectorAll('.lang').forEach(el=>{
-    el.classList.remove('active');
-  });
-  document.querySelectorAll('.'+lang).forEach(el=>{
-    el.classList.add('active');
-  });
-}
-</script>
-</head>
-
-<body>
-
-<header>
-  <div class="logo-text">NMH HOSPITAL</div>
-  <p>24/7 Maternity & Emergency Care</p>
-
-  <div class="lang-buttons">
-    <button onclick="setLang('en')">English</button>
-    <button onclick="setLang('ta')">தமிழ்</button>
-    <button onclick="setLang('ur')">اردو</button>
-  </div>
-</header>
-
-<div class="container">
-
-<!-- ABOUT -->
-<div class="card">
-<h2>About NMH Hospital</h2>
-
-<div class="lang en active">
-NMH Hospital is a trusted multi-specialty healthcare center located in
-Vaniyambadi, Tirupattur District. We provide affordable, compassionate
-and quality medical care for all.
-</div>
-
-<div class="lang ta">
-என்எம்எச் மருத்துவமனை வாணியம்பாடியில் அமைந்துள்ள நம்பகமான
-பல்துறை மருத்துவமையாகும். தரமான மற்றும் குறைந்த செலவில்
-மருத்துவ சேவைகள் வழங்கப்படுகின்றன.
-</div>
-
-<div class="lang ur urdu">
-این ایم ایچ ہسپتال وانیامباڈی میں واقع ایک معیاری
-ملٹی اسپیشلٹی ہسپتال ہے جہاں بہترین علاج فراہم کیا جاتا ہے۔
-</div>
-</div>
-
-<!-- SERVICES -->
-<div class="card">
-<h2>Our Services</h2>
-
-<div class="lang en active">
-<ul>
-<li>24/7 Maternity & Normal Delivery</li>
-<li>Emergency Care</li>
-<li>General Surgery & Urology</li>
-<li>ENT & Orthopaedics</li>
-<li>Laboratory Services</li>
-<li>In-house Pharmacy</li>
-</ul>
-</div>
-
-<div class="lang ta">
-<ul>
-<li>24/7 தாய்மை சேவை & இயற்கை பிரசவம்</li>
-<li>அவசர சிகிச்சை</li>
-<li>பொது அறுவை சிகிச்சை & யூராலஜி</li>
-<li>ENT & எலும்பியல்</li>
-<li>ஆய்வக சேவைகள்</li>
-<li>மருந்தகம்</li>
-</ul>
-</div>
-
-<div class="lang ur urdu">
-<ul>
-<li>24/7 زچگی اور نارمل ڈیلیوری</li>
-<li>ایمرجنسی سہولت</li>
-<li>جنرل سرجری اور یورولوجی</li>
-<li>ای این ٹی اور آرتھوپیڈکس</li>
-<li>لیبارٹری خدمات</li>
-<li>فارمیسی</li>
-</ul>
-</div>
-</div>
-
-<!-- PHOTOS -->
-<div class="card">
-<h2>Hospital Photos</h2>
-<div class="photos">
-<img src="nmh.jpg" alt="NMH Hospital">
-<img src="nmgv.jpg" alt="Hospital View">
-<img src="NMH.f" alt="NMH Facility">
-</div>
-</div>
-
-<!-- VIDEO -->
-<div class="card">
-<h2>Hospital Video</h2>
-<video controls playsinline preload="metadata">
-<source src="nmhh.mp4" type="video/mp4">
-Your browser does not support video.
-</video>
-</div>
-
-<!-- ADDRESS -->
-<div class="card">
-<h2>Address</h2>
-No.2941, Oosi Toopu,<br>
-Behind Nethaji Nagar,<br>
-Eidgha, Amburpet,<br>
-Vaniyambadi – 635752
-</div>
-
-<!-- CONTACT -->
-<div class="card">
-<h2>Contact</h2>
-📞 Hospital: <b>9043155002</b><br>
-📞 Ismail Basha: <b>8217349156</b><br>
-<a class="button" href="tel:9043155002">Call Now</a>
 </div>
 
 </div>
