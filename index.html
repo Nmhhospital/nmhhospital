@@ -6,108 +6,180 @@
 <title>NMH Hospital</title>
 
 <style>
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#f2f5f8;
-  color:#333;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
 }
-header{
-  background:#0b5fa5;
-  color:#fff;
-  text-align:center;
-  padding:20px 15px;
+
+/* Header */
+.header {
+  background: #0d5ea6;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
-header img{
-  width:80px;
-  height:auto;
-  border-radius:50%;
-  background:#fff;
-  padding:6px;
+
+.header img {
+  width: 80px;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
 }
-.logo-text{
-  font-size:22px;
-  font-weight:bold;
-  margin-top:8px;
+
+.header h1 {
+  margin: 10px 0 5px;
 }
-.tagline{
-  font-size:14px;
-  opacity:0.9;
+
+.header p {
+  margin: 0;
+  font-size: 14px;
 }
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:15px;
+
+/* Card layout */
+.card {
+  background: white;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-.card{
-  background:#fff;
-  border-radius:12px;
-  padding:18px;
-  margin-bottom:18px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+
+.card h2 {
+  margin-top: 0;
+  color: #0d5ea6;
 }
-.card h2{
-  margin-top:0;
-  color:#0b5fa5;
-  font-size:20px;
-  border-bottom:1px solid #e0e0e0;
-  padding-bottom:8px;
+
+/* Photos */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
 }
-.photos{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:12px;
+
+.photo-grid img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
 }
-.photos img{
-  width:100%;
-  border-radius:10px;
+
+/* Video */
+.video-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
 }
-video{
-  width:100%;
-  border-radius:12px;
-  background:#000;
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: black;
 }
-.call-btn{
-  display:block;
-  background:#0b5fa5;
-  color:#fff;
-  padding:12px;
-  text-align:center;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:bold;
-  margin-top:10px;
+
+/* Contact button */
+.call-btn {
+  display: block;
+  text-align: center;
+  background: #0d5ea6;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 10px;
 }
-footer{
-  background:#0b5fa5;
-  color:#fff;
-  text-align:center;
-  padding:12px;
-  font-size:13px;
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  color: white;
+  background: #0d5ea6;
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<!-- HEADER -->
+<div class="header">
   <img src="nmhlogo.jpg" alt="NMH Hospital Logo">
-  <div class="logo-text">NMH HOSPITAL</div>
-  <div class="tagline">24/7 Maternity & Emergency Care</div>
-</header>
-
-<div class="container">
-
-<div class="card">
-<h2>About NMH Hospital</h2>
-<p>
-NMH Hospital is a trusted multi-specialty healthcare center located in
-Vaniyambadi, Tirupattur District. We provide affordable, compassionate,
-and quality medical care for all.
-</p>
+  <h1>NMH Hospital</h1>
+  <p>24/7 Maternity & Emergency Care</p>
 </div>
 
+<!-- ABOUT -->
 <div class="card">
+  <h2>About NMH Hospital</h2>
+  <p>
+    NMH Hospital is a trusted multi-specialty healthcare center providing
+    affordable, compassionate, and quality medical care with modern facilities.
+  </p>
+</div>
+
+<!-- SERVICES -->
+<div class="card">
+  <h2>Our Services</h2>
+  <ul>
+    <li>24/7 Maternity & Normal Delivery</li>
+    <li>Emergency Care</li>
+    <li>General Surgery & Urology</li>
+    <li>ENT & Orthopaedics</li>
+    <li>Laboratory Services</li>
+    <li>In-house Pharmacy</li>
+  </ul>
+</div>
+
+<!-- PHOTOS -->
+<div class="card">
+  <h2>Hospital Photos</h2>
+  <div class="photo-grid">
+    <img src="nmh-front.jpg" alt="Hospital Front">
+    <img src="nmh-maternity-ward.jpg" alt="Maternity Ward">
+    <img src="nmh-operation-theatre.jpg" alt="Operation Theatre">
+  </div>
+</div>
+
+<!-- VIDEO -->
+<div class="card">
+  <h2>Hospital Video</h2>
+  <div class="video-wrapper">
+    <video controls preload="metadata" playsinline webkit-playsinline>
+      <source src="nmh-hospital-tour.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<!-- ADDRESS -->
+<div class="card">
+  <h2>Address</h2>
+  <p>
+    NMH Hospital<br>
+    No.2941, Oosi Toopu,<br>
+    Behind Nethaji Nagar,<br>
+    Eidhga, Amburpet,<br>
+    Vaniyambadi – 635752
+  </p>
+</div>
+
+<!-- CONTACT -->
+<div class="card">
+  <h2>Contact</h2>
+  <p>📞 Hospital: <strong>9043155002</strong></p>
+  <p>📞 Ismail Basha: <strong>8217349156</strong></p>
+  <a class="call-btn" href="tel:9043155002">Call Now</a>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 NMH Hospital | Caring for Life
+</div>
+
+</body>
+</html><div class="card">
 <h2>Our Services</h2>
 <ul>
   <li>24/7 Maternity & Normal Delivery</li>
