@@ -6,13 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box;}
 
 body{
   margin:0;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family:Segoe UI, Arial, sans-serif;
   background:#eef3f8;
   color:#222;
 }
@@ -22,63 +20,56 @@ header{
   background:#0b5fa5;
   color:white;
   text-align:center;
-  padding:50px 20px;
+  padding:45px 20px;
 }
 
 .logo-text{
-  font-size:38px;
+  font-size:36px;
   font-weight:800;
   letter-spacing:2px;
 }
 
 header p{
-  margin-top:10px;
-  font-size:18px;
-  opacity:0.95;
+  margin-top:8px;
+  font-size:17px;
 }
 
 /* LANGUAGE BUTTONS */
 .lang-buttons{
-  margin-top:25px;
+  margin-top:20px;
 }
 
 .lang-buttons button{
   background:white;
   color:#0b5fa5;
   border:none;
-  padding:10px 20px;
+  padding:8px 18px;
   margin:5px;
-  border-radius:25px;
-  font-size:15px;
+  border-radius:20px;
   font-weight:600;
   cursor:pointer;
-}
-
-.lang-buttons button:hover{
-  background:#e6f0fb;
 }
 
 /* LAYOUT */
 .container{
   max-width:1200px;
   margin:auto;
-  padding:30px 20px;
+  padding:30px 18px;
 }
 
 .card{
   background:white;
-  padding:35px;
-  margin-bottom:35px;
-  border-radius:16px;
-  box-shadow:0 8px 22px rgba(0,0,0,0.08);
+  padding:30px;
+  margin-bottom:30px;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
 }
 
 .card h2{
-  color:#0b5fa5;
   margin-top:0;
-  font-size:28px;
+  color:#0b5fa5;
   border-bottom:2px solid #e5eef7;
-  padding-bottom:10px;
+  padding-bottom:8px;
 }
 
 /* LANGUAGE CONTENT */
@@ -98,30 +89,25 @@ header p{
 }
 
 /* SERVICES */
-ul{
-  padding-left:20px;
-}
-
-li{
-  margin-bottom:10px;
-}
+ul{padding-left:20px;}
+li{margin-bottom:8px;}
 
 /* IMAGES */
 .photos{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:25px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
 }
 
 .photos img{
   width:100%;
-  border-radius:14px;
+  border-radius:12px;
 }
 
 /* VIDEO */
 video{
   width:100%;
-  border-radius:14px;
+  border-radius:12px;
   background:black;
 }
 
@@ -130,289 +116,14 @@ video{
   display:inline-block;
   background:#0b5fa5;
   color:white;
-  padding:14px 26px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:600;
-  margin-top:15px;
-}
-
-/* FOOTER */
-footer{
-  background:#083d6b;
-  color:white;
-  text-align:center;
-  padding:20px;
-  font-size:14px;
-}
-
-/* RESPONSIVE */
-@media(max-width:600px){
-  .logo-text{
-    font-size:30px;
-  }
-  .card{
-    padding:25px;
-  }
-}
-</style>
-
-<script>
-function showLang(lang){
-  document.querySelectorAll('.lang').forEach(el=>{
-    el.classList.remove('active');
-  });
-  document.getElementById(lang).classList.add('active');
-}
-</script>
-</head>
-
-<body>
-
-<header>
-  <div class="logo-text">NMH HOSPITAL</div>
-  <p>24/7 Maternity & Emergency Care</p>
-
-  <div class="lang-buttons">
-    <button onclick="showLang('en')">English</button>
-    <button onclick="showLang('ta')">தமிழ்</button>
-    <button onclick="showLang('ur')">اردو</button>
-  </div>
-</header>
-
-<div class="container">
-
-<!-- ABOUT -->
-<div class="card">
-  <h2>About NMH Hospital</h2>
-
-  <div id="en" class="lang active">
-    NMH Hospital is a trusted multi-specialty healthcare center located in
-    Vaniyambadi, Tirupattur District. We provide affordable, compassionate
-    and quality medical care for all.
-  </div>
-
-  <div id="ta" class="lang">
-    என்எம்எச் மருத்துவமனை வாணியம்பாடியில் அமைந்துள்ள நம்பகமான
-    பல்துறை மருத்துவமையாகும். தரமான மற்றும் குறைந்த செலவில்
-    சிறந்த மருத்துவ சேவைகள் வழங்கப்படுகின்றன.
-  </div>
-
-  <div id="ur" class="lang urdu">
-    این ایم ایچ ہسپتال وانیامباڈی میں واقع ایک قابل اعتماد
-    ملٹی اسپیشلٹی ہسپتال ہے، جہاں معیاری اور کم خرچ علاج فراہم
-    کیا جاتا ہے۔
-  </div>
-</div>
-
-<!-- SERVICES -->
-<div class="card">
-  <h2>Our Services</h2>
-
-  <div id="en" class="lang active">
-    <ul>
-      <li>24/7 Maternity & Normal Delivery</li>
-      <li>Emergency Care</li>
-      <li>General Surgery & Urology</li>
-      <li>ENT & Orthopaedics</li>
-      <li>Laboratory Services</li>
-      <li>In-house Pharmacy</li>
-    </ul>
-  </div>
-
-  <div id="ta" class="lang">
-    <ul>
-      <li>24/7 தாய்மை சேவை & இயற்கை பிரசவம்</li>
-      <li>அவசர சிகிச்சை</li>
-      <li>பொது அறுவை சிகிச்சை & யூராலஜி</li>
-      <li>காது, மூக்கு, தொண்டை & எலும்பியல்</li>
-      <li>ஆய்வக சேவைகள்</li>
-      <li>உள்நாட்டு மருந்தகம்</li>
-    </ul>
-  </div>
-
-  <div id="ur" class="lang urdu">
-    <ul>
-      <li>24/7 زچگی اور نارمل ڈیلیوری</li>
-      <li>ایمرجنسی سہولت</li>
-      <li>جنرل سرجری اور یورولوجی</li>
-      <li>ای این ٹی اور آرتھوپیڈکس</li>
-      <li>لیبارٹری خدمات</li>
-      <li>فارمیسی</li>
-    </ul>
-  </div>
-</div>
-
-<!-- PHOTOS -->
-<div class="card">
-  <h2>Hospital Photos</h2>
-  <div class="photos">
-    <img src="nmh.jpg" alt="NMH Hospital">
-    <img src="nmgv.jpg" alt="Hospital View">
-    <img src="NMH.f" alt="NMH Facility">
-  </div>
-</div>
-
-<!-- VIDEO -->
-<div class="card">
-  <h2>Hospital Video</h2>
-  <video controls playsinline preload="metadata">
-    <source src="nmhh.mp4" type="video/mp4">
-    Your browser does not support video.
-  </video>
-</div>
-
-<!-- ADDRESS -->
-<div class="card">
-  <h2>Address</h2>
-
-  <div class="lang active">
-    No.2941, Oosi Toopu,<br>
-    Behind Nethaji Nagar,<br>
-    Eidgha, Amburpet,<br>
-    Vaniyambadi – 635752
-  </div>
-</div>
-
-<!-- CONTACT -->
-<div class="card">
-  <h2>Contact</h2>
-  <p>📞 Hospital: <b>9043155002</b><br>
-     📞 Ismail Basha: <b>8217349156</b></p>
-
-  <a class="button" href="tel:9043155002">Call Now</a>
-</div>
-
-</div>
-
-<footer>
-  © 2026 NMH Hospital | Caring for Life
-</footer>
-
-</body>
-</html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>NMH Hospital | Vaniyambadi</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body{
-  margin:0;
-  font-family:"Segoe UI", Arial, sans-serif;
-  background:#eef2f7;
-  color:#222;
-}
-
-/* HEADER */
-header{
-  background:#0b5fa5;
-  color:white;
-  text-align:center;
-  padding:40px 15px;
-}
-
-/* TEXT LOGO */
-.logo-text{
-  font-size:36px;
-  font-weight:700;
-  letter-spacing:2px;
-}
-
-header p{
-  margin-top:8px;
-  font-size:16px;
-  opacity:0.9;
-}
-
-/* LANGUAGE BUTTONS */
-.lang-buttons{
-  margin-top:20px;
-}
-
-.lang-buttons button{
-  background:white;
-  color:#0b5fa5;
-  border:none;
-  padding:8px 18px;
-  margin:5px;
-  border-radius:20px;
-  font-weight:600;
-  cursor:pointer;
-}
-
-.lang-buttons button.active{
-  background:#ffcc00;
-  color:#000;
-}
-
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:30px 15px;
-}
-
-.card{
-  background:white;
-  padding:35px;
-  margin-bottom:35px;
-  border-radius:16px;
-  box-shadow:0 8px 22px rgba(0,0,0,0.08);
-}
-
-.card h2{
-  color:#0b5fa5;
-  margin-top:0;
-  font-size:28px;
-}
-
-.lang{
-  display:none;
-  line-height:1.8;
-  font-size:16px;
-}
-
-.lang.active{
-  display:block;
-}
-
-.urdu{
-  direction:rtl;
-  text-align:right;
-}
-
-/* IMAGES */
-.photos{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:25px;
-}
-
-.photos img{
-  width:100%;
-  border-radius:14px;
-}
-
-/* VIDEO */
-video{
-  width:100%;
-  border-radius:14px;
-  background:black;
-}
-
-/* BUTTON */
-.button{
-  display:inline-block;
-  background:#0b5fa5;
-  color:white;
-  padding:14px 24px;
+  padding:12px 22px;
   border-radius:8px;
   text-decoration:none;
   font-weight:600;
-  margin-top:15px;
+  margin-top:10px;
 }
 
+/* FOOTER */
 footer{
   background:#083d6b;
   color:white;
@@ -421,145 +132,6 @@ footer{
   font-size:14px;
 }
 </style>
-</head>
-
-<body>
-
-<!-- HEADER -->
-<header>
-  <div class="logo-text">NMH HOSPITAL</div>
-  <p>24/7 Maternity & Emergency Care</p>
-
-  <div class="lang-buttons">
-    <button class="active" onclick="setLang('en')">English</button>
-    <button onclick="setLang('ta')">தமிழ்</button>
-    <button onclick="setLang('ur')">اردو</button>
-  </div>
-</header>
-
-<div class="container">
-
-<!-- ABOUT -->
-<div class="card">
-<h2>About NMH Hospital</h2>
-
-<div class="lang en active">
-NMH Hospital is a trusted multi-specialty healthcare center located in
-Vaniyambadi, Tirupattur District. We provide quality, affordable and
-compassionate medical care with modern facilities.
-</div>
-
-<div class="lang ta">
-NMH மருத்துவமனை, திருப்பத்தூர் மாவட்டம் வாணியம்பாடியில் அமைந்துள்ள
-நம்பகமான பல்துறை மருத்துவமையாகும். நவீன வசதிகளுடன் தரமான மற்றும்
-மனிதநேய மருத்துவ சேவைகளை வழங்குகிறோம்.
-</div>
-
-<div class="lang ur urdu">
-این ایم ایچ ہسپتال وانیامباڈی، ضلع تیرپتور میں واقع ایک قابلِ اعتماد
-ملٹی اسپیشلٹی ہسپتال ہے۔ ہم جدید سہولیات کے ساتھ معیاری اور ہمدردانہ
-طبی خدمات فراہم کرتے ہیں۔
-</div>
-</div>
-
-<!-- SERVICES -->
-<div class="card">
-<h2>Our Services</h2>
-
-<div class="lang en active">
-• 24/7 Maternity & Normal Delivery<br>
-• Emergency Care<br>
-• General Surgery & Urology<br>
-• ENT & Orthopaedics<br>
-• Laboratory Services<br>
-• In-house Pharmacy
-</div>
-
-<div class="lang ta">
-• 24/7 தாய்மை சேவை & இயற்கை பிரசவம்<br>
-• அவசர சிகிச்சை<br>
-• பொது அறுவை சிகிச்சை & யூராலஜி<br>
-• காது, மூக்கு, தொண்டை & எலும்பியல்<br>
-• ஆய்வக சேவைகள்<br>
-• உள்ளமைந்த மருந்தகம்
-</div>
-
-<div class="lang ur urdu">
-• 24/7 زچگی اور نارمل ڈیلیوری<br>
-• ایمرجنسی سہولیات<br>
-• جنرل سرجری اور یورولوجی<br>
-• ناک، کان، گلا اور ہڈیوں کا علاج<br>
-• لیبارٹری خدمات<br>
-• فارمیسی
-</div>
-</div>
-
-<!-- PHOTOS -->
-<div class="card">
-<h2>Hospital Gallery</h2>
-<div class="photos">
-  <img src="nmh.jpg" alt="NMH Hospital">
-  <img src="nmgv.jpg" alt="NMH Hospital View">
-  <img src="NMH.f" alt="NMH Facility">
-</div>
-</div>
-
-<!-- VIDEO -->
-<div class="card">
-<h2>Hospital Video</h2>
-<video controls playsinline preload="metadata">
-  <source src="nmhh.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-</div>
-
-<!-- ADDRESS -->
-<div class="card">
-<h2>Address</h2>
-
-<div class="lang en active">
-No.2941, Oosi Toopu, Behind Nethaji Nagar,<br>
-Eidgha, Amburpet, Vaniyambadi – 635752
-</div>
-
-<div class="lang ta">
-எண்.2941, ஊசி தூப்பு, நேதாஜி நகர் பின்னால்,<br>
-ஈத்கா, அம்பூர்பேட்டை, வாணியம்பாடி – 635752
-</div>
-
-<div class="lang ur urdu">
-نمبر 2941، اوسی ٹوپو، نیتاجی نگر کے پیچھے،<br>
-عیدگاہ، امبورپیٹ، وانیامباڈی – 635752
-</div>
-</div>
-
-<!-- CONTACT -->
-<div class="card">
-<h2>Contact</h2>
-
-<div class="lang en active">
-Hospital: 9043155002<br>
-Ismail Basha: 8217349156
-</div>
-
-<div class="lang ta">
-மருத்துவமனை: 9043155002<br>
-இஸ்மாயில் பாஷா: 8217349156
-</div>
-
-<div class="lang ur urdu">
-ہسپتال: 9043155002<br>
-اسماعیل باشا: 8217349156
-</div>
-
-<a class="button" href="tel:9043155002">Call Now</a>
-</div>
-
-</div>
-
-<footer>
-© 2026 NMH Hospital | Caring for Life
-</footer>
 
 <script>
 function setLang(lang){
@@ -569,55 +141,18 @@ function setLang(lang){
   document.querySelectorAll('.'+lang).forEach(el=>{
     el.classList.add('active');
   });
-
-  document.querySelectorAll('.lang-buttons button').forEach(btn=>{
-    btn.classList.remove('active');
-  });
-  event.target.classList.add('active');
 }
 </script>
-
-</body>
-</html>  border-radius:12px;
-}
-
-video{
-  width:100%;
-  border-radius:12px;
-  background:black;
-}
-
-.button{
-  display:inline-block;
-  background:#0b5fa5;
-  color:white;
-  padding:12px 20px;
-  border-radius:6px;
-  text-decoration:none;
-  font-weight:600;
-  margin-top:10px;
-}
-
-footer{
-  background:#083d6b;
-  color:white;
-  text-align:center;
-  padding:15px;
-  font-size:14px;
-}
-</style>
 </head>
 
 <body>
 
 <header>
-  <img src="logo.png" alt="NMH Hospital Logo">
-  <h1>NMH HOSPITAL</h1>
+  <div class="logo-text">NMH HOSPITAL</div>
   <p>24/7 Maternity & Emergency Care</p>
 
-  <!-- LANGUAGE BUTTONS -->
   <div class="lang-buttons">
-    <button class="active" onclick="setLang('en')">English</button>
+    <button onclick="setLang('en')">English</button>
     <button onclick="setLang('ta')">தமிழ்</button>
     <button onclick="setLang('ur')">اردو</button>
   </div>
@@ -631,19 +166,19 @@ footer{
 
 <div class="lang en active">
 NMH Hospital is a trusted multi-specialty healthcare center located in
-Vaniyambadi, Tirupattur District. We provide quality, affordable and
-compassionate medical care.
+Vaniyambadi, Tirupattur District. We provide affordable, compassionate
+and quality medical care for all.
 </div>
 
 <div class="lang ta">
-NMH மருத்துவமனை, திருப்பத்தூர் மாவட்டம் வாணியம்பாடியில் அமைந்துள்ள
-நம்பகமான பல்துறை மருத்துவமையாகும். தரமான மற்றும் மனிதநேய மருத்துவ
-சேவைகளை வழங்குகிறோம்.
+என்எம்எச் மருத்துவமனை வாணியம்பாடியில் அமைந்துள்ள நம்பகமான
+பல்துறை மருத்துவமையாகும். தரமான மற்றும் குறைந்த செலவில்
+மருத்துவ சேவைகள் வழங்கப்படுகின்றன.
 </div>
 
 <div class="lang ur urdu">
-این ایم ایچ ہسپتال وانیامباڈی، ضلع تیرپتور میں واقع ایک قابلِ اعتماد
-ملٹی اسپیشلٹی ہسپتال ہے۔ ہم معیاری اور ہمدردانہ طبی خدمات فراہم کرتے ہیں۔
+این ایم ایچ ہسپتال وانیامباڈی میں واقع ایک معیاری
+ملٹی اسپیشلٹی ہسپتال ہے جہاں بہترین علاج فراہم کیا جاتا ہے۔
 </div>
 </div>
 
@@ -667,18 +202,18 @@ NMH மருத்துவமனை, திருப்பத்தூர் �
 <li>24/7 தாய்மை சேவை & இயற்கை பிரசவம்</li>
 <li>அவசர சிகிச்சை</li>
 <li>பொது அறுவை சிகிச்சை & யூராலஜி</li>
-<li>காது, மூக்கு, தொண்டை & எலும்பியல்</li>
+<li>ENT & எலும்பியல்</li>
 <li>ஆய்வக சேவைகள்</li>
-<li>உள்ளமைந்த மருந்தகம்</li>
+<li>மருந்தகம்</li>
 </ul>
 </div>
 
 <div class="lang ur urdu">
 <ul>
 <li>24/7 زچگی اور نارمل ڈیلیوری</li>
-<li>ایمرجنسی سہولیات</li>
+<li>ایمرجنسی سہولت</li>
 <li>جنرل سرجری اور یورولوجی</li>
-<li>ناک، کان، گلا اور ہڈیوں کا علاج</li>
+<li>ای این ٹی اور آرتھوپیڈکس</li>
 <li>لیبارٹری خدمات</li>
 <li>فارمیسی</li>
 </ul>
@@ -689,72 +224,35 @@ NMH மருத்துவமனை, திருப்பத்தூர் �
 <div class="card">
 <h2>Hospital Photos</h2>
 <div class="photos">
-  <img src="hospital1.jpg" alt="Hospital Front">
-  <img src="hospital2.jpg" alt="Hospital Interior">
+<img src="nmh.jpg" alt="NMH Hospital">
+<img src="nmgv.jpg" alt="Hospital View">
+<img src="NMH.f" alt="NMH Facility">
 </div>
 </div>
 
 <!-- VIDEO -->
 <div class="card">
 <h2>Hospital Video</h2>
-<video controls playsinline preload="metadata" poster="hospital1.jpg">
-  <source src="hospital.mp4" type="video/mp4">
-  Your browser does not support video.
+<video controls playsinline preload="metadata">
+<source src="nmhh.mp4" type="video/mp4">
+Your browser does not support video.
 </video>
 </div>
 
 <!-- ADDRESS -->
 <div class="card">
 <h2>Address</h2>
-
-<div class="lang en active">
-No.2941, Oosi Toopu, Behind Nethaji Nagar,<br>
-Eidgha, Amburpet, Vaniyambadi – 635752
-</div>
-
-<div class="lang ta">
-எண்.2941, ஊசி தூப்பு, நேதாஜி நகர் பின்னால்,<br>
-ஈத்கா, அம்பூர்பேட்டை, வாணியம்பாடி – 635752
-</div>
-
-<div class="lang ur urdu">
-نمبر 2941، اوسی ٹوپو، نیتاجی نگر کے پیچھے،<br>
-عیدگاہ، امبورپیٹ، وانیامباڈی – 635752
-</div>
-</div>
-
-<!-- LOCATION -->
-<div class="card">
-<h2>Location</h2>
-<iframe
-  src="https://www.google.com/maps?q=NMH+Hospital+Vaniyambadi&output=embed"
-  width="100%" height="280"
-  style="border:0;border-radius:12px;"
-  loading="lazy">
-</iframe>
-<br><br>
-<a class="button" href="https://maps.app.goo.gl/wxATGkJgTXDfDRpy7">Get Directions</a>
+No.2941, Oosi Toopu,<br>
+Behind Nethaji Nagar,<br>
+Eidgha, Amburpet,<br>
+Vaniyambadi – 635752
 </div>
 
 <!-- CONTACT -->
 <div class="card">
 <h2>Contact</h2>
-
-<div class="lang en active">
-Hospital: 9043155002<br>
-Ismail Basha: 8217349156
-</div>
-
-<div class="lang ta">
-மருத்துவமனை: 9043155002<br>
-இஸ்மாயில் பாஷா: 8217349156
-</div>
-
-<div class="lang ur urdu">
-ہسپتال: 9043155002<br>
-اسماعیل باشا: 8217349156
-</div>
-
+📞 Hospital: <b>9043155002</b><br>
+📞 Ismail Basha: <b>8217349156</b><br>
 <a class="button" href="tel:9043155002">Call Now</a>
 </div>
 
@@ -762,151 +260,6 @@ Ismail Basha: 8217349156
 
 <footer>
 © 2026 NMH Hospital | Caring for Life
-</footer>
-
-<script>
-function setLang(lang){
-  document.querySelectorAll('.lang').forEach(el=>{
-    el.classList.remove('active');
-  });
-  document.querySelectorAll('.'+lang).forEach(el=>{
-    el.classList.add('active');
-  });
-
-  document.querySelectorAll('.lang-buttons button').forEach(btn=>{
-    btn.classList.remove('active');
-  });
-  event.target.classList.add('active');
-}
-</script>
-
-</body>
-</html>    NMH மருத்துவமனை, திருப்பத்தூர் மாவட்டம் வாணியம்பாடியில் அமைந்துள்ள
-    நம்பகமான பல்துறை மருத்துவமையாகும். தரமான மற்றும் மனிதநேய மருத்துவ
-    சேவைகளை வழங்குகிறோம்.
-  </p>
-
-  <p class="urdu"><b>اردو:</b><br>
-    این ایم ایچ ہسپتال وانیامباڈی، ضلع تیرپتور میں واقع ایک قابلِ اعتماد
-    ملٹی اسپیشلٹی ہسپتال ہے۔ ہم معیاری اور ہمدردانہ طبی خدمات فراہم کرتے ہیں۔
-  </p>
-</section>
-
-<!-- SERVICES -->
-<section class="card">
-  <h2>Our Services</h2>
-
-  <p><b>English</b></p>
-  <ul>
-    <li>24/7 Maternity & Normal Delivery</li>
-    <li>Emergency Care</li>
-    <li>General Surgery & Urology</li>
-    <li>ENT & Orthopaedics</li>
-    <li>Laboratory Services</li>
-    <li>In-house Pharmacy</li>
-  </ul>
-
-  <p><b>தமிழ்</b></p>
-  <ul>
-    <li>24/7 தாய்மை சேவை & இயற்கை பிரசவம்</li>
-    <li>அவசர சிகிச்சை</li>
-    <li>பொது அறுவை சிகிச்சை & யூராலஜி</li>
-    <li>காது, மூக்கு, தொண்டை & எலும்பியல்</li>
-    <li>ஆய்வக சேவைகள்</li>
-    <li>உள்ளமைந்த மருந்தகம்</li>
-  </ul>
-
-  <div class="urdu">
-    <p><b>اردو</b></p>
-    <ul>
-      <li>24/7 زچگی اور نارمل ڈیلیوری</li>
-      <li>ایمرجنسی سہولیات</li>
-      <li>جنرل سرجری اور یورولوجی</li>
-      <li>ناک، کان، گلا اور ہڈیوں کا علاج</li>
-      <li>لیبارٹری خدمات</li>
-      <li>فارمیسی</li>
-    </ul>
-  </div>
-</section>
-
-<!-- PHOTOS -->
-<section class="card">
-  <h2>Hospital Photos</h2>
-  <img src="photo1.jpg" alt="Hospital Front">
-  <img src="photo2.jpg" alt="Hospital Interior">
-</section>
-
-<!-- VIDEO -->
-<section class="card">
-  <h2>Hospital Video</h2>
-  <video controls>
-    <source src="hospital.mp4" type="video/mp4">
-    Your browser does not support video.
-  </video>
-</section>
-
-<!-- ADDRESS -->
-<section class="card">
-  <h2>Address</h2>
-
-  <p><b>English</b><br>
-    No.2941, Oosi Toopu, Behind Nethaji Nagar,<br>
-    Eidgha, Amburpet, Vaniyambadi – 635752
-  </p>
-
-  <p><b>தமிழ்</b><br>
-    எண்.2941, ஊசி தூப்பு, நேதாஜி நகர் பின்னால்,<br>
-    ஈத்கா, அம்பூர்பேட்டை, வாணியம்பாடி – 635752
-  </p>
-
-  <p class="urdu"><b>اردو</b><br>
-    نمبر 2941، اوسی ٹوپو، نیتاجی نگر کے پیچھے،<br>
-    عیدگاہ، امبورپیٹ، وانیامباڈی – 635752
-  </p>
-</section>
-
-<!-- MAP -->
-<section class="card">
-  <h2>Location</h2>
-  <iframe
-    src="https://www.google.com/maps?q=NMH+Hospital+Vaniyambadi&output=embed"
-    width="100%"
-    height="250"
-    style="border:0;border-radius:10px;"
-    loading="lazy">
-  </iframe>
-
-  <br><br>
-  <a class="button" href="https://maps.app.goo.gl/wxATGkJgTXDfDRpy7">
-    📍 Get Directions
-  </a>
-</section>
-
-<!-- CONTACT -->
-<section class="card">
-  <h2>Contact</h2>
-
-  <p><b>English</b><br>
-    Hospital: 9043155002<br>
-    Ismail Basha: 8217349156
-  </p>
-
-  <p><b>தமிழ்</b><br>
-    மருத்துவமனை: 9043155002<br>
-    இஸ்மாயில் பாஷா: 8217349156
-  </p>
-
-  <p class="urdu"><b>اردو</b><br>
-    ہسپتال: 9043155002<br>
-    اسماعیل باشا: 8217349156
-  </p>
-
-  <a class="button" href="tel:9043155002">Call Now</a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  © 2026 NMH Hospital | Caring for Life | வாழ்விற்கு அக்கறை | زندگی کی حفاظت
 </footer>
 
 </body>
