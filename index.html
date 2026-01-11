@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,11 +8,11 @@
 <style>
 body{
   margin:0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   background:#f2f6fa;
 }
 
-.header{
+header{
   background:#0b5fa5;
   color:#fff;
   text-align:center;
@@ -20,15 +20,11 @@ body{
 }
 
 .logo{
-  width:80px;
-  height:80px;
+  width:85px;
+  height:85px;
   border-radius:50%;
   background:#fff;
-  padding:5px;
-}
-
-.header h1{
-  margin:10px 0 5px;
+  padding:6px;
 }
 
 .lang-buttons button{
@@ -63,7 +59,7 @@ body{
 .photos{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:10px;
+  gap:12px;
 }
 
 .photos img{
@@ -89,33 +85,31 @@ video{
   font-weight:bold;
 }
 
-.footer{
-  text-align:center;
-  padding:15px;
+footer{
   background:#0b5fa5;
   color:#fff;
-  margin-top:20px;
+  text-align:center;
+  padding:15px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
-  <img src="nmhlogo.jpg" alt="NMH Hospital Logo" class="logo">
+<header>
+  <img src="nmhlogo.jpg" class="logo" alt="NMH Hospital Logo">
   <h1>NMH HOSPITAL</h1>
   <p>24/7 Maternity & Emergency Care</p>
+
   <div class="lang-buttons">
     <button>English</button>
     <button>தமிழ்</button>
     <button>اردو</button>
   </div>
-</div>
+</header>
 
 <div class="container">
 
-<!-- ABOUT -->
 <div class="card">
   <h2>About NMH Hospital</h2>
   <p>
@@ -125,7 +119,6 @@ video{
   </p>
 </div>
 
-<!-- SERVICES -->
 <div class="card">
   <h2>Our Services</h2>
   <ul>
@@ -138,25 +131,23 @@ video{
   </ul>
 </div>
 
-<!-- PHOTOS -->
 <div class="card">
   <h2>Hospital Photos</h2>
   <div class="photos">
-    <img src="nmh-operation-theatre.jpg" alt="Operation Theatre">
+    <img src="nmh-front.jpg" alt="NMH Hospital Front">
     <img src="nmh-maternity-ward.jpg" alt="Maternity Ward">
+    <img src="nmh-operation-theatre.jpg" alt="Operation Theatre">
   </div>
 </div>
 
-<!-- VIDEO -->
 <div class="card">
   <h2>Hospital Video</h2>
-  <video controls playsinline preload="metadata">
+  <video controls muted playsinline poster="nmh-front.jpg">
     <source src="nmh-hospital-tour.mp4" type="video/mp4">
     Your browser does not support the video.
   </video>
 </div>
 
-<!-- ADDRESS -->
 <div class="card">
   <h2>Address</h2>
   <p>
@@ -168,20 +159,18 @@ video{
   </p>
 </div>
 
-<!-- CONTACT -->
 <div class="card">
   <h2>Contact</h2>
   <p>📞 Hospital: <b>9043155002</b></p>
   <p>📞 Ismail Basha: <b>8217349156</b></p>
-  <a class="call-btn" href="tel:9043155002">Call Now</a>
+  <a href="tel:9043155002" class="call-btn">Call Now</a>
 </div>
 
 </div>
 
-<!-- FOOTER -->
-<div class="footer">
-  © 2026 NMH Hospital | Caring for Life
-</div>
+<footer>
+© 2026 NMH Hospital | Caring for Life
+</footer>
 
 </body>
 </html>
