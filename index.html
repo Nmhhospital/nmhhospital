@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+j<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,127 +6,104 @@
 <title>NMH Hospital</title>
 
 <style>
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#f2f5f8;
-  color:#333;
-}
-header{
-  background:#0b5fa5;
-  color:#fff;
-  text-align:center;
-  padding:20px;
-}
-header img{
-  width:80px;
-  background:#fff;
-  padding:8px;
-  border-radius:50%;
-}
-header h1{
-  margin:10px 0 5px;
-}
-header p{
-  margin:0;
-  font-size:14px;
-  opacity:0.9;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f2f6fa;
 }
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:15px;
-}
-.card{
-  background:#fff;
-  border-radius:12px;
-  padding:18px;
-  margin-bottom:18px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.08);
-}
-.card h2{
-  color:#0b5fa5;
-  margin-top:0;
-  border-bottom:1px solid #eee;
-  padding-bottom:6px;
+header {
+  background: #0b5fa5;
+  color: white;
+  padding: 15px;
+  text-align: center;
 }
 
-.gallery{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-}
-.gallery img{
-  width:32%;
-  border-radius:10px;
-  cursor:pointer;
+header img {
+  height: 50px;
 }
 
-.video-thumb{
-  position:relative;
-  cursor:pointer;
-}
-.video-thumb img{
-  width:100%;
-  border-radius:10px;
-}
-.play-btn{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  font-size:50px;
-  color:#fff;
-  background:rgba(0,0,0,0.6);
-  border-radius:50%;
-  padding:10px 20px;
+.card {
+  background: white;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 8px;
 }
 
-.call-btn{
-  display:block;
-  background:#0b5fa5;
-  color:#fff;
-  text-align:center;
-  padding:12px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-  margin-top:10px;
+h2 {
+  color: #0b5fa5;
+  margin-top: 0;
 }
 
-footer{
-  background:#0b5fa5;
-  color:#fff;
-  text-align:center;
-  padding:12px;
-  font-size:13px;
+ul {
+  padding-left: 20px;
 }
 
-/* Popup */
-.popup{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.85);
-  z-index:9999;
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
 }
-.popup-content{
-  max-width:90%;
-  margin:10% auto;
-  background:#fff;
-  padding:10px;
-  border-radius:10px;
+
+.gallery img {
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
 }
-.popup img,
-.popup video{
-  width:100%;
-  display:none;
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
 }
-.close{
-  float:right;
-  font-size:24px;
-  cursor:pointer;
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  margin-top: 10%;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Video */
+video {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.call-btn {
+  background: #0b5fa5;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+footer {
+  background: #0b5fa5;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
 </style>
 </head>
@@ -134,107 +111,79 @@ footer{
 <body>
 
 <header>
-  <img src="assets/images/nmhlogo.jpg" alt="NMH Logo">
+  <img src="assets/images/nmhlogo.png" alt="NMH Hospital">
   <h1>NMH Hospital</h1>
   <p>24/7 Maternity & Emergency Care</p>
 </header>
 
-<div class="container">
-
 <div class="card">
-<h2>About NMH Hospital</h2>
-<p>
-NMH Hospital is a trusted multi-specialty healthcare center located in
-Vaniyambadi, Tirupattur District, providing compassionate, affordable,
-and quality medical care.
-</p>
+  <h2>About NMH Hospital</h2>
+  <p>
+    NMH Hospital is a trusted multi-specialty healthcare center located in
+    Vaniyambadi, providing compassionate, affordable, and quality medical care.
+  </p>
 </div>
 
 <div class="card">
-<h2>Our Services</h2>
-<ul>
-<li>24/7 Maternity & Normal Delivery</li>
-<li>Emergency Medical Care</li>
-<li>General Surgery & Urology</li>
-<li>ENT & Orthopaedics</li>
-<li>Laboratory Services</li>
-<li>In-house Pharmacy</li>
-</ul>
+  <h2>Our Services</h2>
+  <ul>
+    <li>24/7 Maternity & Normal Delivery</li>
+    <li>Emergency Medical Care</li>
+    <li>General Surgery & Urology</li>
+    <li>ENT & Orthopaedics</li>
+    <li>Laboratory Services</li>
+    <li>In-house Pharmacy</li>
+  </ul>
 </div>
 
 <div class="card">
-<h2>Hospital Facilities</h2>
-<div class="gallery">
-  <img src="assets/images/nmh-front.jpg" onclick="openImage(this.src)">
-  <img src="assets/images/nmh-maternity-ward.jpg" onclick="openImage(this.src)">
-  <img src="assets/images/nmh-operation-theatre.jpg" onclick="openImage(this.src)">
-</div>
-</div>
-
-<div class="card">
-<h2>Hospital Tour</h2>
-<div class="video-thumb" onclick="openVideo()">
-  <img src="assets/images/nmh-front.jpg">
-  <div class="play-btn">▶</div>
-</div>
-</div>
-
-<div class="card">
-<h2>Address</h2>
-<p>
-NMH Hospital<br>
-No.2941, Oosi Toopu,<br>
-Behind Nethaji Nagar,<br>
-Eidgha, Amburpet,<br>
-Vaniyambadi – 635752
-</p>
-</div>
-
-<div class="card">
-<h2>Contact</h2>
-<p>
-📞 Hospital: <b>9043155002</b><br>
-📞 Ismail Basha: <b>8217349156</b>
-</p>
-<a href="tel:9043155002" class="call-btn">Call Now</a>
-</div>
-
-</div>
-
-<footer>
-© 2026 NMH Hospital | Caring for Life
-</footer>
-
-<!-- POPUP -->
-<div id="popup" class="popup" onclick="closePopup()">
-  <div class="popup-content" onclick="event.stopPropagation()">
-    <span class="close" onclick="closePopup()">×</span>
-    <img id="popupImage">
-    <video id="popupVideo" controls playsinline>
-      <source src="assets/videos/hospital-tour.mp4" type="video/mp4">
-    </video>
+  <h2>Hospital Facilities</h2>
+  <div class="gallery">
+    <img src="assets/images/hospital1.jpg" onclick="openModal(this.src)">
+    <img src="assets/images/hospital2.jpg" onclick="openModal(this.src)">
+    <img src="assets/images/hospital3.jpg" onclick="openModal(this.src)">
   </div>
 </div>
 
+<div class="card">
+  <h2>Hospital Tour</h2>
+  <video controls playsinline poster="assets/images/hospital1.jpg">
+    <source src="assets/videos/hospital-tour.mp4" type="video/mp4">
+    Your browser does not support video.
+  </video>
+</div>
+
+<div class="card">
+  <h2>Address</h2>
+  <p>
+    NMH Hospital<br>
+    No.2941, Oosi Toopu,<br>
+    Behind Nethaji Nagar,<br>
+    Edhga, Amburpet,<br>
+    Vaniyambadi – 635752
+  </p>
+</div>
+
+<a class="call-btn" href="tel:9043155002">📞 Call Now</a>
+
+<footer>
+  © 2026 NMH Hospital | Caring for Life
+</footer>
+
+<!-- Image Modal -->
+<div id="imgModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
 <script>
-function openImage(src){
-  document.getElementById("popup").style.display="block";
-  document.getElementById("popupImage").src=src;
-  document.getElementById("popupImage").style.display="block";
-  document.getElementById("popupVideo").style.display="none";
+function openModal(src) {
+  document.getElementById("imgModal").style.display = "block";
+  document.getElementById("modalImg").src = src;
 }
-function openVideo(){
-  document.getElementById("popup").style.display="block";
-  let v=document.getElementById("popupVideo");
-  v.style.display="block";
-  document.getElementById("popupImage").style.display="none";
-  v.play();
-}
-function closePopup(){
-  document.getElementById("popup").style.display="none";
-  let v=document.getElementById("popupVideo");
-  v.pause();
-  v.currentTime=0;
+
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
 }
 </script>
 
