@@ -3,272 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NMH Hospital</title>
+<title>NMH Hospital | 24/7 Care</title>
+<meta name="description" content="NMH Hospital – 24/7 Maternity & Emergency Care in Vaniyambadi">
 
 <style>
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#f2f6fa;
-  color:#333;
-}
-header{
-  background:#0b5fa5;
-  color:white;
-  text-align:center;
-  padding:20px;
-}
-header img{
-  height:60px;
-  background:white;
-  border-radius:50%;
-  padding:6px;
-}
-.container{
-  padding:15px;
-  max-width:1100px;
-  margin:auto;
-}
-.card{
-  background:white;
-  border-radius:12px;
-  padding:15px;
-  margin-bottom:15px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.08);
-}
-.card h2{
-  margin-top:0;
-  color:#0b5fa5;
-}
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
-  gap:10px;
-}
-.gallery img{
-  width:100%;
-  border-radius:10px;
-  cursor:pointer;
-}
-video{
-  width:100%;
-  border-radius:10px;
-}
-.call-btn{
-  display:block;
-  background:#0b5fa5;
-  color:white;
-  text-align:center;
-  padding:15px;
-  border-radius:10px;
-  text-decoration:none;
-  font-size:18px;
-  margin-top:10px;
-}
-footer{
-  background:#0b5fa5;
-  color:white;
-  text-align:center;
-  padding:10px;
-  margin-top:20px;
-}
-
-/* Image Popup */
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.85);
-  z-index:999;
-}
-.modal img{
-  max-width:90%;
-  max-height:80%;
-  margin:10% auto;
-  display:block;
-  border-radius:10px;
-}
-.modal span{
-  position:absolute;
-  top:15px;
-  right:25px;
-  font-size:30px;
-  color:white;
-  cursor:pointer;
-}
+body{margin:0;font-family:Arial;background:#f2f6fa}
+header{background:#0b5ed7;color:#fff;text-align:center;padding:20px}
+.logo{width:90px}
+.card{background:#fff;margin:15px;padding:15px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.gallery,.doctors{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.gallery img,.doctor img{width:100%;border-radius:8px}
+.doctor{text-align:center}
+video{width:100%;border-radius:10px}
+input,textarea,button{width:100%;padding:10px;margin-top:8px}
+button{background:#0b5ed7;color:#fff;border:none;border-radius:8px}
+.call-btn{display:block;background:#0b5ed7;color:#fff;text-align:center;padding:12px;border-radius:8px;text-decoration:none}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px;border-radius:50%;font-size:22px;text-decoration:none}
+footer{background:#0b5ed7;color:#fff;text-align:center;padding:12px;margin-top:20px}
 </style>
 </head>
 
 <body>
 
 <header>
-  <img src="assets/images/nmhlogo.jpg" alt="NMH Hospital Logo">
-  <h1>NMH Hospital</h1>
-  <p>24/7 Maternity & Emergency Care</p>
-</header>
-
-<div class="container">
-
-  <div class="card">
-    <h2>About NMH Hospital</h2>
-    <p>
-      NMH Hospital is a trusted multi-specialty healthcare center located in
-      Vaniyambadi, providing compassionate, affordable, and quality medical care
-      for all patients.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>Our Services</h2>
-    <ul>
-      <li>24/7 Maternity & Normal Delivery</li>
-      <li>Emergency Medical Care</li>
-      <li>General Surgery & Urology</li>
-      <li>ENT & Orthopaedics</li>
-      <li>Laboratory Services</li>
-      <li>In-house Pharmacy</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>Hospital Facilities</h2>
-    <div class="gallery">
-      <img src="assets/images/nmh-front.jpg" onclick="openImage(this.src)">
-      <img src="assets/images/nmh-maternity-ward.jpg" onclick="openImage(this.src)">
-      <img src="assets/images/nmh-operation-theatre.jpg" onclick="openImage(this.src)">
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>Hospital Tour</h2>
-    <video controls playsinline poster="assets/images/nmh-front.jpg">
-      <source src="assets/videos/nmh-hospital-tour.mp4" type="video/mp4">
-      Your browser does not support the video.
-    </video>
-  </div>
-
-  <div class="card">
-    <h2>Address</h2>
-    <p>
-      NMH Hospital<br>
-      No.2941, Oosi Toopu,<br>
-      Behind Nethaji Nagar,<br>
-      Edhga, Amburpet,<br>
-      Vaniyambadi – 635752
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>Contact</h2>
-    <p>
-      📞 Hospital: <b>9043155002</b><br>
-      📞 Ismail Basha: <b>8217349156</b>
-    </p>
-    <a class="call-btn" href="tel:9043155002">Call Now</a>
-  </div>
-
-</div>
-
-<footer>
-  © 2026 NMH Hospital | Caring for Life
-</footer>
-
-<!-- Image Modal -->
-<div class="modal" id="imgModal" onclick="closeImage()">
-  <span>&times;</span>
-  <img id="modalImg">
-</div>
-
-<script>
-function openImage(src){
-  document.getElementById("imgModal").style.display="block";
-  document.getElementById("modalImg").src=src;
-}
-function closeImage(){
-  document.getElementById("imgModal").style.display="none";
-}
-</script>
-
-</body>
-</html>
-<body>
-
-<header>
-  <img src="assets/images/nmhlogo.png" alt="NMH Hospital">
+  <img src="logo.png" class="logo" alt="NMH Hospital">
   <h1>NMH Hospital</h1>
   <p>24/7 Maternity & Emergency Care</p>
 </header>
 
 <div class="card">
-  <h2>About NMH Hospital</h2>
-  <p>
-    NMH Hospital is a trusted multi-specialty healthcare center located in
-    Vaniyambadi, providing compassionate, affordable, and quality medical care.
-  </p>
+<h2>About NMH Hospital</h2>
+<p>NMH Hospital is a trusted multi-specialty healthcare center in Vaniyambadi, offering compassionate and affordable medical care.</p>
 </div>
 
 <div class="card">
-  <h2>Our Services</h2>
-  <ul>
-    <li>24/7 Maternity & Normal Delivery</li>
-    <li>Emergency Medical Care</li>
-    <li>General Surgery & Urology</li>
-    <li>ENT & Orthopaedics</li>
-    <li>Laboratory Services</li>
-    <li>In-house Pharmacy</li>
-  </ul>
+<h2>Our Services</h2>
+<ul>
+<li>24/7 Maternity & Normal Delivery</li>
+<li>Emergency Medical Care</li>
+<li>General Surgery & Urology</li>
+<li>ENT & Orthopaedics</li>
+<li>Laboratory Services</li>
+<li>In-house Pharmacy</li>
+</ul>
 </div>
 
 <div class="card">
-  <h2>Hospital Facilities</h2>
-  <div class="gallery">
-    <img src="assets/images/hospital1.jpg" onclick="openModal(this.src)">
-    <img src="assets/images/hospital2.jpg" onclick="openModal(this.src)">
-    <img src="assets/images/hospital3.jpg" onclick="openModal(this.src)">
-  </div>
+<h2>Hospital Facilities</h2>
+<div class="gallery">
+<img src="hospital-front.jpg">
+<img src="maternity-ward.jpg">
+<img src="operation-theatre.jpg">
+</div>
 </div>
 
 <div class="card">
-  <h2>Hospital Tour</h2>
-  <video controls playsinline poster="assets/images/hospital1.jpg">
-    <source src="assets/videos/hospital-tour.mp4" type="video/mp4">
-    Your browser does not support video.
-  </video>
+<h2>Hospital Tour</h2>
+<video controls>
+<source src="hospital-tour.mp4" type="video/mp4">
+</video>
 </div>
 
 <div class="card">
-  <h2>Address</h2>
-  <p>
-    NMH Hospital<br>
-    No.2941, Oosi Toopu,<br>
-    Behind Nethaji Nagar,<br>
-    Edhga, Amburpet,<br>
-    Vaniyambadi – 635752
-  </p>
+<h2>Our Doctors</h2>
+<div class="doctors">
+<div class="doctor">
+<img src="doctor1.jpg">
+<h3>Dr. A. Ismail</h3>
+<p>MBBS, MS – General Surgeon</p>
+</div>
+<div class="doctor">
+<img src="doctor2.jpg">
+<h3>Dr. S. Fatima</h3>
+<p>MBBS, DGO – Obstetrics</p>
+</div>
+</div>
 </div>
 
-<a class="call-btn" href="tel:9043155002">📞 Call Now</a>
+<div class="card">
+<h2>Book Appointment</h2>
+<form>
+<input type="text" placeholder="Patient Name" required>
+<input type="tel" placeholder="Mobile Number" required>
+<input type="date" required>
+<textarea placeholder="Message"></textarea>
+<button>Submit</button>
+</form>
+</div>
+
+<div class="card">
+<h2>Contact</h2>
+<p><b>Hospital:</b> 9043155002</p>
+<p><b>Ismail Basha:</b> 8217349156</p>
+<a class="call-btn" href="tel:9043155002">Call Now</a>
+</div>
+
+<a class="whatsapp" href="https://wa.me/919043155002" target="_blank">💬</a>
 
 <footer>
-  © 2026 NMH Hospital | Caring for Life
+© 2026 NMH Hospital | Caring for Life
 </footer>
-
-<!-- Image Modal -->
-<div id="imgModal" class="modal" onclick="closeModal()">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modalImg">
-</div>
-
-<script>
-function openModal(src) {
-  document.getElementById("imgModal").style.display = "block";
-  document.getElementById("modalImg").src = src;
-}
-
-function closeModal() {
-  document.getElementById("imgModal").style.display = "none";
-}
-</script>
 
 </body>
 </html>
