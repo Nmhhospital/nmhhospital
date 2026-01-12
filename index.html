@@ -6,73 +6,127 @@
 <title>NMH Hospital</title>
 
 <style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  margin: 0;
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f2f5f8;
+  color:#333;
+}
+header{
+  background:#0b5fa5;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+header img{
+  width:80px;
+  background:#fff;
+  padding:8px;
+  border-radius:50%;
+}
+header h1{
+  margin:10px 0 5px;
+}
+header p{
+  margin:0;
+  font-size:14px;
+  opacity:0.9;
 }
 
-header {
-  background: #0d63a5;
-  color: white;
-  text-align: center;
-  padding: 20px;
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:15px;
+}
+.card{
+  background:#fff;
+  border-radius:12px;
+  padding:18px;
+  margin-bottom:18px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+.card h2{
+  color:#0b5fa5;
+  margin-top:0;
+  border-bottom:1px solid #eee;
+  padding-bottom:6px;
 }
 
-section {
-  padding: 15px;
+.gallery{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.gallery img{
+  width:32%;
+  border-radius:10px;
+  cursor:pointer;
 }
 
-.card {
-  background: white;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 10px;
+.video-thumb{
+  position:relative;
+  cursor:pointer;
+}
+.video-thumb img{
+  width:100%;
+  border-radius:10px;
+}
+.play-btn{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:50px;
+  color:#fff;
+  background:rgba(0,0,0,0.6);
+  border-radius:50%;
+  padding:10px 20px;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-  gap: 10px;
+.call-btn{
+  display:block;
+  background:#0b5fa5;
+  color:#fff;
+  text-align:center;
+  padding:12px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:10px;
 }
 
-.gallery img, .gallery button {
-  width: 100%;
-  border-radius: 10px;
-  cursor: pointer;
+footer{
+  background:#0b5fa5;
+  color:#fff;
+  text-align:center;
+  padding:12px;
+  font-size:13px;
 }
 
-/* POPUP MODAL */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
+/* Popup */
+.popup{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  z-index:9999;
 }
-
-.modal-content {
-  max-width: 90%;
-  max-height: 90%;
+.popup-content{
+  max-width:90%;
+  margin:10% auto;
+  background:#fff;
+  padding:10px;
+  border-radius:10px;
 }
-
-.modal img, .modal video {
-  width: 100%;
-  border-radius: 10px;
+.popup img,
+.popup video{
+  width:100%;
+  display:none;
 }
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
+.close{
+  float:right;
+  font-size:24px;
+  cursor:pointer;
 }
 </style>
 </head>
@@ -80,128 +134,109 @@ section {
 <body>
 
 <header>
+  <img src="assets/images/nmhlogo.jpg" alt="NMH Logo">
   <h1>NMH Hospital</h1>
   <p>24/7 Maternity & Emergency Care</p>
 </header>
 
-<section class="card">
-  <h2>Hospital Facilities</h2>
-  <div class="gallery">
-    <img src="assets/photos/nmh-front.jpg" onclick="openImage(this.src)">
-    <img src="assets/photos/nmh-maternity-ward.jpg" onclick="openImage(this.src)">
-    <img src="assets/photos/nmh-operation-theatre.jpg" onclick="openImage(this.src)">
-  </div>
-</section>
+<div class="container">
 
-<section class="card">
-  <h2>Hospital Tour</h2>
-  <button onclick="openVideo()" style="padding:12px;border:none;background:#0d63a5;color:white;border-radius:8px;">
-    ▶ Play Hospital Video
-  </button>
-</section>
-
-<!-- IMAGE MODAL -->
-<div id="imageModal" class="modal" onclick="closeModal()">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="popupImage">
-</div>
-
-<!-- VIDEO MODAL -->
-<div id="videoModal" class="modal" onclick="closeModal()">
-  <span class="close">&times;</span>
-  <video class="modal-content" id="popupVideo" controls playsinline webkit-playsinline>
-    <source src="assets/videos/nmh-hospital-tour.mp4" type="video/mp4">
-  </video>
-</div>
-
-<script>
-function openImage(src) {
-  document.getElementById("popupImage").src = src;
-  document.getElementById("imageModal").style.display = "flex";
-}
-
-function openVideo() {
-  const video = document.getElementById("popupVideo");
-  video.currentTime = 0;
-  video.play();
-  document.getElementById("videoModal").style.display = "flex";
-}
-
-function closeModal() {
-  document.getElementById("imageModal").style.display = "none";
-  const video = document.getElementById("popupVideo");
-  video.pause();
-  document.getElementById("videoModal").style.display = "none";
-}
-</script>
-
-</body>
-</html><div class="header">
-  <img src="nmhlogo.jpg">
-  <h1>NMH Hospital</h1>
-  <p>24/7 Maternity & Emergency Care</p>
+<div class="card">
+<h2>About NMH Hospital</h2>
+<p>
+NMH Hospital is a trusted multi-specialty healthcare center located in
+Vaniyambadi, Tirupattur District, providing compassionate, affordable,
+and quality medical care.
+</p>
 </div>
 
 <div class="card">
-  <h2>About NMH Hospital</h2>
-  <p>
-    NMH Hospital is a trusted multi-specialty healthcare center providing
-    compassionate, affordable, and quality medical services for all patients.
-  </p>
+<h2>Our Services</h2>
+<ul>
+<li>24/7 Maternity & Normal Delivery</li>
+<li>Emergency Medical Care</li>
+<li>General Surgery & Urology</li>
+<li>ENT & Orthopaedics</li>
+<li>Laboratory Services</li>
+<li>In-house Pharmacy</li>
+</ul>
 </div>
 
 <div class="card">
-  <h2>Our Services</h2>
-  <ul>
-    <li>24/7 Maternity & Normal Delivery</li>
-    <li>Emergency Medical Care</li>
-    <li>General Surgery & Urology</li>
-    <li>ENT & Orthopaedics</li>
-    <li>Laboratory Services</li>
-    <li>In-house Pharmacy</li>
-  </ul>
+<h2>Hospital Facilities</h2>
+<div class="gallery">
+  <img src="assets/images/nmh-front.jpg" onclick="openImage(this.src)">
+  <img src="assets/images/nmh-maternity-ward.jpg" onclick="openImage(this.src)">
+  <img src="assets/images/nmh-operation-theatre.jpg" onclick="openImage(this.src)">
+</div>
 </div>
 
 <div class="card">
-  <h2>Hospital Facilities</h2>
-  <div class="photo-grid">
-    <img src="nmh-front.jpg">
-    <img src="nmh-maternity-ward.jpg">
-    <img src="nmh-operation-theatre.jpg">
-  </div>
+<h2>Hospital Tour</h2>
+<div class="video-thumb" onclick="openVideo()">
+  <img src="assets/images/nmh-front.jpg">
+  <div class="play-btn">▶</div>
+</div>
 </div>
 
 <div class="card">
-  <h2>Hospital Tour</h2>
-  <div class="video-wrapper">
-    <video controls playsinline preload="metadata">
-      <source src="nmh-hospital-tour.mp4" type="video/mp4">
+<h2>Address</h2>
+<p>
+NMH Hospital<br>
+No.2941, Oosi Toopu,<br>
+Behind Nethaji Nagar,<br>
+Eidgha, Amburpet,<br>
+Vaniyambadi – 635752
+</p>
+</div>
+
+<div class="card">
+<h2>Contact</h2>
+<p>
+📞 Hospital: <b>9043155002</b><br>
+📞 Ismail Basha: <b>8217349156</b>
+</p>
+<a href="tel:9043155002" class="call-btn">Call Now</a>
+</div>
+
+</div>
+
+<footer>
+© 2026 NMH Hospital | Caring for Life
+</footer>
+
+<!-- POPUP -->
+<div id="popup" class="popup" onclick="closePopup()">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <span class="close" onclick="closePopup()">×</span>
+    <img id="popupImage">
+    <video id="popupVideo" controls playsinline>
+      <source src="assets/videos/hospital-tour.mp4" type="video/mp4">
     </video>
   </div>
 </div>
 
-<div class="card">
-  <h2>Location</h2>
-  <iframe 
-    src="https://www.google.com/maps?q=NMH%20Hospital%20Vaniyambadi&output=embed"
-    width="100%" height="300" style="border:0;" loading="lazy">
-  </iframe>
-</div>
-
-<div class="card">
-  <h2>Contact</h2>
-  <p>📞 Hospital: <strong>9043155002</strong></p>
-  <p>📞 Ismail Basha: <strong>8217349156</strong></p>
-  <a href="tel:9043155002" class="call-btn">Call Now</a>
-</div>
-
-<a class="whatsapp" 
-href="https://wa.me/919043155002" 
-target="_blank">💬</a>
-
-<div class="footer">
-  © 2026 NMH Hospital | Caring for Life
-</div>
+<script>
+function openImage(src){
+  document.getElementById("popup").style.display="block";
+  document.getElementById("popupImage").src=src;
+  document.getElementById("popupImage").style.display="block";
+  document.getElementById("popupVideo").style.display="none";
+}
+function openVideo(){
+  document.getElementById("popup").style.display="block";
+  let v=document.getElementById("popupVideo");
+  v.style.display="block";
+  document.getElementById("popupImage").style.display="none";
+  v.play();
+}
+function closePopup(){
+  document.getElementById("popup").style.display="none";
+  let v=document.getElementById("popupVideo");
+  v.pause();
+  v.currentTime=0;
+}
+</script>
 
 </body>
 </html>
