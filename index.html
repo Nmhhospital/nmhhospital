@@ -3,111 +3,140 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NMH Hospital | 24/7 Care</title>
+<title>NMH Hospital</title>
 
 <style>
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  background: #f2f6fb;
-  color: #333;
+  background: #f4f6f8;
+  margin: 0;
 }
 
-.header {
-  background: #0b5fa5;
-  color: #fff;
+header {
+  background: #0d63a5;
+  color: white;
   text-align: center;
-  padding: 25px 15px;
+  padding: 20px;
 }
 
-.header img {
-  width: 90px;
-  background: #fff;
-  border-radius: 50%;
-  padding: 6px;
+section {
+  padding: 15px;
 }
-
-.header h1 { margin: 10px 0 4px; }
-.header p { margin: 0; font-size: 14px; }
 
 .card {
-  background: #fff;
-  margin: 16px;
-  padding: 18px;
-  border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,.08);
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
 }
 
-.card h2 {
-  margin-top: 0;
-  color: #0b5fa5;
-}
-
-ul { padding-left: 18px; }
-li { margin-bottom: 6px; }
-
-.photo-grid {
+.gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 10px;
 }
 
-.photo-grid img {
+.gallery img, .gallery button {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* POPUP MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal img, .modal video {
   width: 100%;
   border-radius: 10px;
 }
 
-.video-wrapper {
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-video {
-  width: 100%;
-  height: auto;
-  display: block;
-  background: #000;
-}
-
-.call-btn {
-  display: block;
-  background: #0b5fa5;
-  color: #fff;
-  text-align: center;
-  padding: 14px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-/* WhatsApp Button */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
+.close {
+  position: absolute;
+  top: 15px;
   right: 20px;
-  background: #25D366;
-  color: #fff;
-  padding: 14px 16px;
-  border-radius: 50%;
-  font-size: 22px;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,.3);
-}
-
-.footer {
-  background: #0b5fa5;
-  color: #fff;
-  text-align: center;
-  padding: 12px;
-  font-size: 13px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
 }
 </style>
 </head>
 
 <body>
 
-<div class="header">
+<header>
+  <h1>NMH Hospital</h1>
+  <p>24/7 Maternity & Emergency Care</p>
+</header>
+
+<section class="card">
+  <h2>Hospital Facilities</h2>
+  <div class="gallery">
+    <img src="assets/photos/nmh-front.jpg" onclick="openImage(this.src)">
+    <img src="assets/photos/nmh-maternity-ward.jpg" onclick="openImage(this.src)">
+    <img src="assets/photos/nmh-operation-theatre.jpg" onclick="openImage(this.src)">
+  </div>
+</section>
+
+<section class="card">
+  <h2>Hospital Tour</h2>
+  <button onclick="openVideo()" style="padding:12px;border:none;background:#0d63a5;color:white;border-radius:8px;">
+    ▶ Play Hospital Video
+  </button>
+</section>
+
+<!-- IMAGE MODAL -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="popupImage">
+</div>
+
+<!-- VIDEO MODAL -->
+<div id="videoModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <video class="modal-content" id="popupVideo" controls playsinline webkit-playsinline>
+    <source src="assets/videos/nmh-hospital-tour.mp4" type="video/mp4">
+  </video>
+</div>
+
+<script>
+function openImage(src) {
+  document.getElementById("popupImage").src = src;
+  document.getElementById("imageModal").style.display = "flex";
+}
+
+function openVideo() {
+  const video = document.getElementById("popupVideo");
+  video.currentTime = 0;
+  video.play();
+  document.getElementById("videoModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+  const video = document.getElementById("popupVideo");
+  video.pause();
+  document.getElementById("videoModal").style.display = "none";
+}
+</script>
+
+</body>
+</html><div class="header">
   <img src="nmhlogo.jpg">
   <h1>NMH Hospital</h1>
   <p>24/7 Maternity & Emergency Care</p>
