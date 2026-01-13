@@ -4,130 +4,55 @@
   <meta charset="UTF-8">
   <title>NMH Hospital</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f4f6f8;
-      color: #333;
-    }
-
-    header {
-      background-color: #0a6ebd;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-
-    header img {
-      height: 60px;
-      margin-bottom: 10px;
-    }
-
-    section {
-      padding: 20px;
-    }
-
-    h2 {
-      color: #0a6ebd;
-      margin-bottom: 10px;
-    }
-
-    .video-container {
-      max-width: 100%;
-      margin: 15px auto;
-    }
-
-    video {
-      width: 100%;
-      border-radius: 10px;
-      background: black;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    ul li {
-      margin-bottom: 6px;
-    }
-
-    .contact {
-      background-color: #0a6ebd;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .contact a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      display: block;
-      margin: 6px 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px;
-      background: #e9ecef;
-      font-size: 14px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-  <img src="logo.png" alt="NMH Hospital Logo">
+<header class="header">
   <h1>NMH Hospital</h1>
-  <p>24/7 Emergency & Maternity Care</p>
+  <p>Caring for Life</p>
 </header>
 
-<section>
-  <h2>Hospital Tour</h2>
-
-  <div class="video-container">
-    <video controls autoplay muted playsinline>
-      <source src="videos/hospital-tour.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
+<section class="welcome">
+  <img src="images/doctors-team.jpg" alt="NMH Hospital Doctors Team">
+  <h2>Welcome to NMH Hospital</h2>
+  <p>Trusted healthcare with compassion</p>
 </section>
 
-<section>
+<section class="actions">
+  <!-- CALL -->
+  <a href="tel:+919043155002" class="btn call">📞 Call Now</a>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/918217349156" class="btn whatsapp" target="_blank">
+    💬 WhatsApp Us
+  </a>
+
+  <!-- MAP -->
+  <a href="https://www.google.com/maps?q=NMH+Hospital" class="btn map" target="_blank">
+    📍 View Location
+  </a>
+</section>
+
+<section class="services">
   <h2>Our Services</h2>
+  <img src="images/services.jpg" alt="Hospital Services">
   <ul>
     <li>24/7 Emergency Care</li>
-    <li>Maternity & Normal Delivery</li>
-    <li>ENT Surgery</li>
-    <li>Urology Surgery</li>
-    <li>General Surgery</li>
-    <li>Orthopedic Care</li>
-    <li>Laboratory Facilities</li>
-    <li>In-house Pharmacy</li>
+    <li>Maternity & Child Care</li>
+    <li>Laboratory Services</li>
+    <li>Outpatient Services</li>
   </ul>
 </section>
 
-<section>
-  <h2>Why Choose NMH Hospital</h2>
-  <ul>
-    <li>Experienced Doctors</li>
-    <li>Modern Operation Theatre</li>
-    <li>Patient-friendly Care</li>
-    <li>Affordable Treatment</li>
-  </ul>
+<section class="lab">
+  <h2>Laboratory</h2>
+  <img src="images/lab.jpg" alt="NMH Hospital Laboratory">
+  <p>Accurate & advanced diagnostic services.</p>
 </section>
 
-<div class="contact">
-  <h2>Contact Us</h2>
-  <a href="tel:09043155002">📞 090431 55002</a>
-  <a href="tel:+918217349156">📞 +91 82173 49156</a>
-</div>
-
-<footer>
-  © 2026 NMH Hospital. All Rights Reserved.
+<footer class="footer">
+  <p>© 2026 NMH Hospital. All Rights Reserved.</p>
 </footer>
 
 </body>
