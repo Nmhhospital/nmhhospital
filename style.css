@@ -1,97 +1,87 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f7fa;
-  color: #333;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fa;
+    color: #333;
 }
 
 /* HEADER */
 .header {
-  background: #0a6ebd;
-  color: white;
-  text-align: center;
-  padding: 20px;
+    background: #0a6ebd;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 /* WELCOME */
 .welcome {
-  text-align: center;
-  padding: 20px;
+    text-align: center;
+    padding: 20px;
 }
 
 .welcome img {
-  width: 100%;
-  max-height: 420px;
-  object-fit: cover;
-  border-radius: 12px;
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
-/* CARDS */
-.cards {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding: 15px;
-}
-
-.card {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* MAP */
-.map {
-  text-align: center;
-  padding: 20px;
+/* BUTTONS */
+.actions {
+    margin-top: 15px;
 }
 
 .btn {
-  background: #25d366;
-  color: white;
-  padding: 12px 20px;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: bold;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.call { background: #1e88e5; }
+.whatsapp { background: #25d366; }
+.location { background: #2ecc71; }
+
+/* CARD SECTIONS */
+.card {
+    background: white;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.grid img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* TEXT */
+.center {
+    text-align: center;
+    margin-top: 10px;
 }
 
 /* FOOTER */
 .footer {
-  background: #0a6ebd;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-}
-
-/* FLOATING BUTTONS */
-.float {
-  position: fixed;
-  right: 15px;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  color: white;
-  font-size: 26px;
-  text-align: center;
-  line-height: 55px;
-  text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-.call {
-  bottom: 90px;
-  background: #0a6ebd;
-}
-
-.whatsapp {
-  bottom: 20px;
-  background: #25d366;
+    background: #0a6ebd;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 }
