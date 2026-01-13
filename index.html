@@ -1,183 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>NMH Hospital | Multi-Specialty Care</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#f4f7fb;
-  color:#333;
-}
-header{
-  background:#0a6ebd;
-  color:#fff;
-  text-align:center;
-  padding:20px;
-}
-header img{
-  width:90px;
-  margin-bottom:10px;
-}
-nav{
-  background:#083b6f;
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-nav a{
-  color:#fff;
-  padding:12px 18px;
-  text-decoration:none;
-  font-size:14px;
-}
-nav a:hover{
-  background:#0a6ebd;
-}
-section{
-  max-width:950px;
-  margin:auto;
-  padding:30px 20px;
-}
-h2{
-  color:#0a6ebd;
-  margin-bottom:15px;
-}
-.card{
-  background:#fff;
-  padding:16px;
-  margin-bottom:12px;
-  border-radius:8px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.05);
-}
-.special{
-  background:#e8f2fc;
-  border-left:5px solid #0a6ebd;
-}
-video{
-  width:100%;
-  border-radius:10px;
-}
-iframe{
-  width:100%;
-  height:360px;
-  border:0;
-  border-radius:10px;
-}
-.contact a{
-  text-decoration:none;
-  color:#0a6ebd;
-  font-weight:bold;
-}
-.whatsapp{
-  display:inline-block;
-  background:#25d366;
-  color:#fff;
-  padding:12px 18px;
-  border-radius:6px;
-  margin-top:10px;
-}
-footer{
-  background:#083b6f;
-  color:#fff;
-  text-align:center;
-  padding:15px;
-  font-size:14px;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>NMH Hospital | Multi-Speciality Care</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-  <img src="images/logo.jpg" alt="NMH Hospital Logo">
+<!-- HEADER -->
+<header class="header">
+  <img src="images/logo.jpg" alt="NMH Hospital Logo" class="logo">
   <h1>NMH Hospital</h1>
-  <p>Trusted Multi-Specialty Care for Your Family</p>
+  <p>Trusted Multi-Speciality Care for Your Family</p>
 </header>
 
-<nav>
+<!-- NAVIGATION -->
+<nav class="navbar">
   <a href="#about">About</a>
   <a href="#specialities">Specialities</a>
-  <a href="#tour">Hospital Tour</a>
+  <a href="#gallery">Gallery</a>
   <a href="#location">Location</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<section id="about">
+<!-- ABOUT -->
+<section id="about" class="section">
   <h2>About Us</h2>
-  <div class="card">
-    NMH Hospital is a trusted multi-specialty healthcare center providing
+  <p>
+    NMH Hospital is a trusted multi-speciality healthcare center providing
     compassionate, advanced, and patient-focused medical services.
-    We are especially known for **safe maternity care and normal deliveries**.
-  </div>
+    We are especially known for safe maternity care and normal deliveries.
+  </p>
 </section>
 
-<section id="specialities">
+<!-- SPECIALITIES -->
+<section id="specialities" class="section light">
   <h2>Our Specialities</h2>
+  <ul class="specialities">
+    <li>🩺 General Physician</li>
+    <li>🔪 General Surgery</li>
+    <li>🦴 Orthopedic</li>
+    <li>🧬 Urology Surgery</li>
+    <li>👂 ENT Surgery</li>
+    <li>🤰 Main Senior OB-Gynecologist – Normal Delivery Specialist</li>
+  </ul>
+</section>
 
-  <div class="card">🩺 General Physician</div>
-  <div class="card">🔪 General Surgery</div>
-  <div class="card">🦴 Orthopedic</div>
-  <div class="card">🧬 Urology Surgery</div>
-  <div class="card">👂 ENT Surgery</div>
-
-  <div class="card special">
-    👩‍⚕️ <strong>Main Senior OB-Gynecologist</strong><br>
-    Normal Delivery Specialist
+<!-- GALLERY -->
+<section id="gallery" class="section">
+  <h2>Hospital Gallery</h2>
+  <div class="gallery">
+    <img src="images/maternity-care.jpg" alt="Maternity Care">
+    <img src="images/patient-care.jpg" alt="Patient Care">
+    <img src="images/services.jpg" alt="Hospital Services">
+    <img src="images/lab.jpg" alt="Laboratory">
+    <img src="images/doctors-team.jpg" alt="Doctors Team">
   </div>
 </section>
 
-<section id="tour">
-  <h2>Hospital Tour</h2>
-  <video controls playsinline>
-    <source src="videos/hospital-tour.mp4" type="video/mp4">
-    Your browser does not support the video.
-  </video>
-</section>
-
-<section id="location">
+<!-- LOCATION -->
+<section id="location" class="section light">
   <h2>Our Location</h2>
+
+  <p>
+    <strong>NMH HOSPITAL</strong><br>
+    No.2941, Oosi Toopu,<br>
+    Behind Nethaji Nagar,<br>
+    Eidgha, Amburpet,<br>
+    Vaniyambadi, Valayambattu,<br>
+    Tamil Nadu – 635752
+  </p>
+
+  <!-- MAP BUTTON -->
+  <a class="map-btn" target="_blank"
+     href="https://www.google.com/maps/search/?api=1&query=NMH+Hospital+No.2941+Oosi+Toopu+Behind+Nethaji+Nagar+Eidgha+Amburpet+Vaniyambadi+Tamil+Nadu+635752">
+     📍 Open in Google Maps
+  </a>
+
+  <!-- EMBED MAP -->
   <iframe
-    src="https://www.google.com/maps?q=NMH+Nursing+Home+Hospital+Amburpet+Vaniyambadi&output=embed"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    allowfullscreen>
+    src="https://www.google.com/maps?q=NMH+Hospital+Amburpet+Vaniyambadi&output=embed"
+    loading="lazy">
   </iframe>
 </section>
 
-<section id="contact" class="contact">
+<!-- CONTACT -->
+<section id="contact" class="section">
   <h2>Contact Us</h2>
 
-  <p class="card">
-    <i class="fa-solid fa-mobile-screen"></i>
-    <a href="tel:+919043155002">+91 90431 55002</a>
-  </p>
+  <p>📱 <a href="tel:+919043155002">+91 90431 55002</a></p>
+  <p>☎️ <a href="tel:04174291236">04174-291236</a></p>
 
-  <p class="card">
-    <i class="fa-solid fa-phone"></i>
-    <a href="tel:04174291236">04174-291236</a>
-  </p>
-
-  <p class="card">
-    <i class="fa-solid fa-clock"></i><br>
-    <strong>Working Hours</strong><br>
+  <p>
+    ⏰ <strong>Working Hours</strong><br>
     Monday – Sunday<br>
     24 × 7 Emergency Available
   </p>
-
-  <a class="whatsapp" href="https://wa.me/919043155002" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
-  </a>
 </section>
 
-<footer>
-  © 2026 NMH Hospital. All Rights Reserved.
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919043155002" class="whatsapp-float" target="_blank">💬</a>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 NMH Hospital. All Rights Reserved.</p>
 </footer>
 
 </body>
