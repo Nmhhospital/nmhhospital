@@ -1,100 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NMH Hospital</title>
+  <meta charset="UTF-8">
+  <title>NMH Hospital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:#f5f7fb;
-  color:#333;
-}
-header{
-  background:#0b3c8a;
-  color:#fff;
-  text-align:center;
-  padding:20px 10px;
-}
-header img{
-  height:60px;
-}
-nav{
-  background:#082f6b;
-  text-align:center;
-  padding:10px;
-}
-nav a{
-  color:#fff;
-  margin:0 12px;
-  text-decoration:none;
-  font-weight:bold;
-}
-section{
-  padding:30px 15px;
-  max-width:1100px;
-  margin:auto;
-}
-h2{
-  text-align:center;
-  color:#0b3c8a;
-  margin-bottom:20px;
-}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:15px;
-}
-.card{
-  background:#fff;
-  padding:20px;
-  border-radius:12px;
-  text-align:center;
-  box-shadow:0 4px 10px rgba(0,0,0,0.08);
-}
-video{
-  width:100%;
-  border-radius:12px;
-}
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:10px;
-}
-.gallery img{
-  width:100%;
-  border-radius:10px;
-}
-footer{
-  background:#0b3c8a;
-  color:#fff;
-  text-align:center;
-  padding:15px;
-  margin-top:30px;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
 
-/* Floating buttons */
-.whatsapp, .call{
-  position:fixed;
-  right:15px;
-  padding:12px 15px;
-  border-radius:50px;
-  color:#fff;
-  font-weight:bold;
-  text-decoration:none;
-  box-shadow:0 4px 10px rgba(0,0,0,0.3);
-}
-.whatsapp{
-  bottom:80px;
-  background:#25D366;
-}
-.call{
-  bottom:20px;
-  background:#0b3c8a;
-}
-</style>
+    header {
+      background-color: #0a6ebd;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    header img {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #0a6ebd;
+      margin-bottom: 10px;
+    }
+
+    .video-container {
+      max-width: 100%;
+      margin: 15px auto;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 10px;
+      background: black;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    .contact {
+      background-color: #0a6ebd;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .contact a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      display: block;
+      margin: 6px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #e9ecef;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
@@ -102,81 +82,53 @@ footer{
 <header>
   <img src="logo.png" alt="NMH Hospital Logo">
   <h1>NMH Hospital</h1>
-  <p>24/7 Maternity & Emergency Care</p>
+  <p>24/7 Emergency & Maternity Care</p>
 </header>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#specialities">Specialities</a>
-  <a href="#video">Video</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#location">Location</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section id="about">
-  <h2>About Us</h2>
-  <p style="text-align:center;">
-    NMH Hospital is a trusted healthcare center providing quality medical services with experienced doctors,
-    modern facilities, and compassionate patient care.
-  </p>
-</section>
-
-<section id="specialities">
-  <h2>Our Specialities</h2>
-  <div class="cards">
-    <div class="card">ENT Surgery</div>
-    <div class="card">Urology Surgery</div>
-    <div class="card">General Physician</div>
-    <div class="card">General Surgery</div>
-    <div class="card">Gynecologist & Obstetrician</div>
-    <div class="card">Normal Delivery Specialist</div>
-    <div class="card">Orthopedic</div>
-  </div>
-</section>
-
-<section id="video">
+<section>
   <h2>Hospital Tour</h2>
-  <video controls>
-    <source src="videos/hospital-tour.mp4" type="video/mp4">
-    Your browser does not support video.
-  </video>
-</section>
 
-<section id="gallery">
-  <h2>Hospital Gallery</h2>
-  <div class="gallery">
-    <img src="hospital-front.jpg">
-    <img src="maternity-ward.jpg">
-    <img src="nmh-operation-theatre.jpg">
-    <img src="doctor1.jpg">
+  <div class="video-container">
+    <video controls autoplay muted playsinline>
+      <source src="videos/hospital-tour.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
 </section>
 
-<section id="location">
-  <h2>Hospital Location</h2>
-  <iframe 
-    src="https://www.google.com/maps?q=NMH%20Hospital%20Vaniyambadi&output=embed"
-    width="100%" height="300" style="border:0;border-radius:12px;" loading="lazy">
-  </iframe>
+<section>
+  <h2>Our Services</h2>
+  <ul>
+    <li>24/7 Emergency Care</li>
+    <li>Maternity & Normal Delivery</li>
+    <li>ENT Surgery</li>
+    <li>Urology Surgery</li>
+    <li>General Surgery</li>
+    <li>Orthopedic Care</li>
+    <li>Laboratory Facilities</li>
+    <li>In-house Pharmacy</li>
+  </ul>
 </section>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p style="text-align:center;">
-    NMH Hospital<br>
-    Vaniyambadi, Tamil Nadu<br>
-    Phone: +91 XXXXXXXXXX
-  </p>
+<section>
+  <h2>Why Choose NMH Hospital</h2>
+  <ul>
+    <li>Experienced Doctors</li>
+    <li>Modern Operation Theatre</li>
+    <li>Patient-friendly Care</li>
+    <li>Affordable Treatment</li>
+  </ul>
 </section>
+
+<div class="contact">
+  <h2>Contact Us</h2>
+  <a href="tel:09043155002">📞 090431 55002</a>
+  <a href="tel:+918217349156">📞 +91 82173 49156</a>
+</div>
 
 <footer>
   © 2026 NMH Hospital. All Rights Reserved.
 </footer>
-
-<!-- Floating Buttons -->
-<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a>
-<a class="call" href="tel:+91XXXXXXXXXX">Call</a>
 
 </body>
 </html>
