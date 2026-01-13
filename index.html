@@ -1,141 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>NMH Hospital</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>NMH Hospital | Trusted Care</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f6f9;
-}
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 
-header {
-  background: #0b6cb8;
-  color: white;
-  padding: 15px;
-  text-align: center;
-}
-
-header img {
-  height: 60px;
-}
-
-section {
-  padding: 20px;
-}
-
-.card {
-  background: white;
-  border-radius: 12px;
-  padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-h2 {
-  color: #0b6cb8;
-}
-
-.buttons {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  flex: 1;
-  text-align: center;
-  padding: 12px;
-  border-radius: 8px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.call { background: #28a745; }
-.whatsapp { background: #25d366; }
-.map { background: #0b6cb8; }
-
-iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
-  border-radius: 10px;
-}
-
-footer {
-  background: #0b6cb8;
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
-</style>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-  <img src="images/logo.jpg" alt="NMH Hospital Logo">
+  <img src="images/logo.png" alt="NMH Hospital Logo" class="logo">
   <h1>NMH Hospital</h1>
-  <p>Trusted Care for Every Family</p>
+  <p>Trusted Care for Mother & Child</p>
 </header>
 
-<section class="card">
-  <img src="images/doctors-team.jpg" alt="Doctors Team">
-  <h2>Welcome to NMH Hospital</h2>
-  <p>We provide quality healthcare with experienced doctors and modern facilities.</p>
+<!-- NAVIGATION -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#video">Hospital Tour</a>
+  <a href="#map">Location</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    NMH Hospital is a modern healthcare center dedicated to providing
+    compassionate and professional medical services. We specialize in
+    maternity care, women’s health, and general medicine.
+  </p>
 </section>
 
-<section class="card">
+<!-- SERVICES -->
+<section id="services">
   <h2>Our Services</h2>
-  <img src="images/services.jpg" alt="Hospital Services">
   <ul>
-    <li>24/7 Emergency Care</li>
-    <li>Maternity & Child Care</li>
-    <li>Laboratory Services</li>
-    <li>Outpatient Services</li>
+    <li>👶 Maternity Care</li>
+    <li>🤰 Antenatal & Postnatal Care</li>
+    <li>🩺 General Medicine</li>
+    <li>🧪 Laboratory Services</li>
+    <li>🚑 Emergency Care</li>
   </ul>
 </section>
 
-<section class="card">
-  <h2>Maternity Care</h2>
-  <img src="images/maternity-care.jpg" alt="Maternity Care">
-  <p>Complete maternity and newborn care with safety and compassion.</p>
+<!-- VIDEO -->
+<section id="video">
+  <h2>Hospital Tour</h2>
+
+  <video controls playsinline>
+    <source src="videos/hospital-tour.mp4" type="video/mp4">
+    Your browser does not support the video.
+  </video>
+
 </section>
 
-<section class="card">
-  <h2>Laboratory</h2>
-  <img src="images/lab.jpg" alt="Laboratory">
-  <p>Accurate and fast diagnostic laboratory services.</p>
-</section>
+<!-- MAP -->
+<section id="map">
+  <h2>Our Location</h2>
 
-<section class="card">
-  <h2>Contact Us</h2>
-
-  <div class="buttons">
-    <a href="tel:9043155002" class="btn call">📞 Call</a>
-    <a href="https://wa.me/919043155002" class="btn whatsapp">💬 WhatsApp</a>
-    <a href="https://www.google.com/maps?q=NMH+Hospital+Vaniyambadi" target="_blank" class="btn map">📍 Map</a>
-  </div>
-</section>
-
-<section class="card">
-  <h2>Hospital Location</h2>
-  <iframe 
+  <iframe
     src="https://www.google.com/maps?q=NMH+Hospital+Vaniyambadi&output=embed"
-    allowfullscreen
+    allowfullscreen=""
     loading="lazy">
   </iframe>
 </section>
 
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+
+  <p><i class="fa-solid fa-phone"></i> +91 90431 55002</p>
+
+  <a class="whatsapp" href="https://wa.me/919043155002" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+  </a>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <p>© 2026 NMH Hospital. All Rights Reserved.</p>
 </footer>
