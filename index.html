@@ -1,108 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NMH Hospital | 24/7 Care</title>
-<meta name="description" content="NMH Hospital – 24/7 Maternity & Emergency Care in Vaniyambadi">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NMH Hospital | 24/7 Maternity & Emergency Care</title>
 
-<style>
-body{margin:0;font-family:Arial;background:#f2f6fa}
-header{background:#0b5ed7;color:#fff;text-align:center;padding:20px}
-.logo{width:90px}
-.card{background:#fff;margin:15px;padding:15px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
-.gallery,.doctors{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
-.gallery img,.doctor img{width:100%;border-radius:8px}
-.doctor{text-align:center}
-video{width:100%;border-radius:10px}
-input,textarea,button{width:100%;padding:10px;margin-top:8px}
-button{background:#0b5ed7;color:#fff;border:none;border-radius:8px}
-.call-btn{display:block;background:#0b5ed7;color:#fff;text-align:center;padding:12px;border-radius:8px;text-decoration:none}
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px;border-radius:50%;font-size:22px;text-decoration:none}
-footer{background:#0b5ed7;color:#fff;text-align:center;padding:12px;margin-top:20px}
-</style>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #333;
+    }
+
+    header {
+      background: #0b5ed7;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 90px;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background: #084298;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0b5ed7;
+      margin-bottom: 25px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .video-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    video {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #0b5ed7;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <img src="logo.png" class="logo" alt="NMH Hospital">
-  <h1>NMH Hospital</h1>
-  <p>24/7 Maternity & Emergency Care</p>
-</header>
+  <!-- HEADER -->
+  <header>
+    <img src="logo.png" alt="NMH Hospital Logo">
+    <h1>NMH Hospital</h1>
+    <p>24/7 Maternity & Emergency Care</p>
+  </header>
 
-<div class="card">
-<h2>About NMH Hospital</h2>
-<p>NMH Hospital is a trusted multi-specialty healthcare center in Vaniyambadi, offering compassionate and affordable medical care.</p>
-</div>
+  <!-- NAV -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#tour">Hospital Tour</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<div class="card">
-<h2>Our Services</h2>
-<ul>
-<li>24/7 Maternity & Normal Delivery</li>
-<li>Emergency Medical Care</li>
-<li>General Surgery & Urology</li>
-<li>ENT & Orthopaedics</li>
-<li>Laboratory Services</li>
-<li>In-house Pharmacy</li>
-</ul>
-</div>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p style="text-align:center;">
+      NMH Hospital is a trusted multi-specialty healthcare center providing
+      compassionate, affordable and quality medical care with modern facilities
+      and experienced doctors.
+    </p>
+  </section>
 
-<div class="card">
-<h2>Hospital Facilities</h2>
-<div class="gallery">
-<img src="hospital-front.jpg">
-<img src="maternity-ward.jpg">
-<img src="operation-theatre.jpg">
-</div>
-</div>
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>24/7 Maternity Care</h3>
+        <p>Safe delivery, prenatal & postnatal care.</p>
+      </div>
+      <div class="card">
+        <h3>Emergency Services</h3>
+        <p>Round-the-clock emergency medical support.</p>
+      </div>
+      <div class="card">
+        <h3>Operation Theatre</h3>
+        <p>Well-equipped modern OT facilities.</p>
+      </div>
+      <div class="card">
+        <h3>Laboratory</h3>
+        <p>Accurate diagnostics & testing.</p>
+      </div>
+    </div>
+  </section>
 
-<div class="card">
-<h2>Hospital Tour</h2>
-<video controls>
-<source src="hospital-tour.mp4" type="video/mp4">
-</video>
-</div>
+  <!-- GALLERY -->
+  <section id="gallery">
+    <h2>Our Facility</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="hospital-front.jpg" alt="Hospital Front">
+        <p>Hospital Front</p>
+      </div>
+      <div class="card">
+        <img src="maternity-ward.jpg" alt="Maternity Ward">
+        <p>Maternity Ward</p>
+      </div>
+      <div class="card">
+        <img src="nmh-operation-theatre.jpg" alt="Operation Theatre">
+        <p>Operation Theatre</p>
+      </div>
+    </div>
+  </section>
 
-<div class="card">
-<h2>Our Doctors</h2>
-<div class="doctors">
-<div class="doctor">
-<img src="doctor1.jpg">
-<h3>Dr. A. Ismail</h3>
-<p>MBBS, MS – General Surgeon</p>
-</div>
-<div class="doctor">
-<img src="doctor2.jpg">
-<h3>Dr. S. Fatima</h3>
-<p>MBBS, DGO – Obstetrics</p>
-</div>
-</div>
-</div>
+  <!-- HOSPITAL TOUR VIDEO -->
+  <section id="tour">
+    <h2>Hospital Tour</h2>
+    <div class="video-box">
+      <video controls>
+        <source src="videos/hospital-tour.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
 
-<div class="card">
-<h2>Book Appointment</h2>
-<form>
-<input type="text" placeholder="Patient Name" required>
-<input type="tel" placeholder="Mobile Number" required>
-<input type="date" required>
-<textarea placeholder="Message"></textarea>
-<button>Submit</button>
-</form>
-</div>
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p style="text-align:center;">
+      <strong>NMH Hospital</strong><br>
+      No.2941, Oosi Toopu,<br>
+      Behind Nethaji Nagar,<br>
+      Eidgha, Amburpet,<br>
+      Vaniyambadi, Vellore District,<br>
+      Tamil Nadu – 635752
+    </p>
+  </section>
 
-<div class="card">
-<h2>Contact</h2>
-<p><b>Hospital:</b> 9043155002</p>
-<p><b>Ismail Basha:</b> 8217349156</p>
-<a class="call-btn" href="tel:9043155002">Call Now</a>
-</div>
-
-<a class="whatsapp" href="https://wa.me/919043155002" target="_blank">💬</a>
-
-<footer>
-© 2026 NMH Hospital | Caring for Life
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 NMH Hospital. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
