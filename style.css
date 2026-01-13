@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,6 +5,7 @@ body {
   color: #333;
 }
 
+/* HEADER */
 .header {
   background: #0a6ebd;
   color: white;
@@ -13,6 +13,7 @@ body {
   padding: 20px;
 }
 
+/* WELCOME */
 .welcome {
   text-align: center;
   padding: 20px;
@@ -25,53 +26,72 @@ body {
   border-radius: 12px;
 }
 
-.actions {
+/* CARDS */
+.cards {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 20px;
-}
-
-.btn {
   padding: 15px;
-  font-size: 18px;
-  text-decoration: none;
-  color: white;
-  border-radius: 10px;
-  font-weight: bold;
-  text-align: center;
 }
-
-.call { background: #28a745; }
-.whatsapp { background: #25d366; }
-.map { background: #dc3545; }
 
 .card {
   background: white;
-  margin: 15px;
-  padding: 20px;
-  border-radius: 12px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 .card img {
   width: 100%;
   border-radius: 10px;
-  margin: 10px 0;
 }
 
-.card ul {
-  list-style: none;
-  padding: 0;
+/* MAP */
+.map {
+  text-align: center;
+  padding: 20px;
 }
 
-.card li {
-  padding: 8px 0;
-  border-bottom: 1px solid #eee;
+.btn {
+  background: #25d366;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
 }
 
+/* FOOTER */
 .footer {
   background: #0a6ebd;
   color: white;
   text-align: center;
   padding: 15px;
+  margin-top: 20px;
+}
+
+/* FLOATING BUTTONS */
+.float {
+  position: fixed;
+  right: 15px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  line-height: 55px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.call {
+  bottom: 90px;
+  background: #0a6ebd;
+}
+
+.whatsapp {
+  bottom: 20px;
+  background: #25d366;
 }
