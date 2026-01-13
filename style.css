@@ -1,1 +1,77 @@
 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fa;
+  color: #333;
+}
+
+.header {
+  background: #0a6ebd;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome {
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+.btn {
+  padding: 15px;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.call { background: #28a745; }
+.whatsapp { background: #25d366; }
+.map { background: #dc3545; }
+
+.card {
+  background: white;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.footer {
+  background: #0a6ebd;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
