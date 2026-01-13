@@ -4,37 +4,40 @@
   <meta charset="UTF-8">
   <title>NMH Hospital</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="header">
   <h1>NMH Hospital</h1>
   <p>Caring for Life</p>
 </header>
 
+<!-- WELCOME / PORTAL -->
 <section class="welcome">
   <img src="images/doctors-team.jpg" alt="NMH Hospital Doctors Team">
   <h2>Welcome to NMH Hospital</h2>
-  <p>Trusted healthcare with compassion</p>
+  <p>Trusted healthcare with compassion & excellence</p>
 </section>
 
+<!-- ACTION BUTTONS -->
 <section class="actions">
-  <!-- CALL -->
   <a href="tel:+919043155002" class="btn call">📞 Call Now</a>
 
-  <!-- WHATSAPP -->
   <a href="https://wa.me/918217349156" class="btn whatsapp" target="_blank">
     💬 WhatsApp Us
   </a>
 
-  <!-- MAP -->
   <a href="https://www.google.com/maps?q=NMH+Hospital" class="btn map" target="_blank">
     📍 View Location
   </a>
 </section>
 
-<section class="services">
+<!-- SERVICES -->
+<section class="card">
   <h2>Our Services</h2>
   <img src="images/services.jpg" alt="Hospital Services">
   <ul>
@@ -45,15 +48,121 @@
   </ul>
 </section>
 
-<section class="lab">
+<!-- LAB -->
+<section class="card">
   <h2>Laboratory</h2>
   <img src="images/lab.jpg" alt="NMH Hospital Laboratory">
-  <p>Accurate & advanced diagnostic services.</p>
+  <p>Accurate and advanced diagnostic services.</p>
 </section>
 
+<!-- PATIENT CARE -->
+<section class="card">
+  <h2>Patient Care</h2>
+  <img src="images/patient-care.jpg" alt="Patient Care">
+  <p>Comfortable, safe and compassionate care for every patient.</p>
+</section>
+
+<!-- MATERNITY -->
+<section class="card">
+  <h2>Maternity Care</h2>
+  <img src="images/pregnant-women.jpg" alt="Maternity Care">
+  <p>Specialized care for mothers and newborns.</p>
+</section>
+
+<!-- FOOTER -->
 <footer class="footer">
   <p>© 2026 NMH Hospital. All Rights Reserved.</p>
 </footer>
 
 </body>
 </html>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fa;
+  color: #333;
+}
+
+/* HEADER */
+.header {
+  background: #0a6ebd;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* WELCOME */
+.welcome {
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ACTION BUTTONS */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  text-align: center;
+}
+
+.btn {
+  padding: 15px;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.call {
+  background: #28a745;
+}
+
+.whatsapp {
+  background: #25d366;
+}
+
+.map {
+  background: #dc3545;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* FOOTER */
+.footer {
+  background: #0a6ebd;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
