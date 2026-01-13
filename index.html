@@ -1,170 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NMH Hospital</title>
+  <meta charset="UTF-8">
+  <title>NMH Hospital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-  box-sizing: border-box;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f8fb;
+      color: #333;
+    }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f7fb;
-  color: #333;
-}
+    header {
+      background: #0d6efd;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
 
-/* HEADER */
-header {
-  background: #0d6efd;
-  color: white;
-  text-align: center;
-  padding: 20px 10px;
-}
+    header img {
+      height: 60px;
+      vertical-align: middle;
+    }
 
-header img {
-  width: 70px;
-  margin-bottom: 8px;
-}
+    section {
+      padding: 20px;
+    }
 
-header h1 {
-  margin: 0;
-  font-size: 22px;
-}
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0d6efd;
+    }
 
-header p {
-  margin: 4px 0 0;
-  font-size: 14px;
-}
+    /* HERO */
+    .hero img {
+      width: 100%;
+      border-radius: 16px;
+    }
 
-/* CONTAINER */
-.container {
-  padding: 15px;
-}
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      background: #0d6efd;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
 
-/* CARD */
-.card {
-  background: white;
-  border-radius: 14px;
-  margin-bottom: 20px;
-  padding: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
+    /* SERVICES */
+    .service-card {
+      background: white;
+      border-radius: 16px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
 
-.card img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 10px;
-}
+    .service-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
 
-.card h2 {
-  text-align: center;
-  margin: 10px 0;
-}
-
-/* BUTTONS */
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 15px;
-}
-
-.btn {
-  padding: 10px 18px;
-  border-radius: 30px;
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.call { background: #0d6efd; }
-.whatsapp { background: #25d366; }
-.map { background: #dc3545; }
-
-/* LIST */
-ul {
-  padding-left: 20px;
-}
-
-.center {
-  text-align: center;
-}
-
-/* FOOTER */
-footer {
-  background: #0d6efd;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-  font-size: 14px;
-}
-</style>
+    /* FOOTER */
+    footer {
+      background: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
   <img src="images/logo.jpg" alt="NMH Hospital Logo">
   <h1>NMH Hospital</h1>
-  <p>Caring for Life</p>
+  <p>Trusted Care for Every Family</p>
 </header>
 
-<div class="container">
+<!-- HERO -->
+<section class="hero">
+  <img src="images/doctors-team.jpg" alt="NMH Hospital Team">
+  <p style="text-align:center;">
+    <a href="tel:09043155002" class="btn">📞 Call Now</a>
+  </p>
+</section>
 
-<!-- WELCOME -->
-<div class="card">
-  <img src="images/doctors-team.jpg" alt="Doctors Team">
-  <h2>Welcome to NMH Hospital</h2>
-  <p class="center">Trusted healthcare with compassion & excellence</p>
-
-  <div class="buttons">
-    <a href="tel:9043155002" class="btn call">📞 Call Now</a>
-    <a href="https://wa.me/919043155002" class="btn whatsapp">💬 WhatsApp</a>
-    <a href="https://www.google.com/maps/search/NMH+Hospital" class="btn map">📍 View Location</a>
-  </div>
-</div>
+<!-- ABOUT -->
+<section>
+  <h2>About Us</h2>
+  <p>
+    NMH Hospital is a trusted multi-specialty healthcare center providing
+    compassionate, affordable and quality medical care.
+  </p>
+</section>
 
 <!-- SERVICES -->
-<div class="card">
+<section>
   <h2>Our Services</h2>
-  <img src="images/services.jpg" alt="Services">
-  <ul>
-    <li>24/7 Emergency Care</li>
-    <li>Maternity & Child Care</li>
-    <li>Laboratory Services</li>
-    <li>Outpatient Services</li>
-  </ul>
-</div>
 
-<!-- LAB -->
-<div class="card">
-  <h2>Laboratory</h2>
-  <img src="images/lab.jpg" alt="Laboratory">
-  <p class="center">Accurate and advanced diagnostic services.</p>
-</div>
+  <div class="service-card">
+    <img src="images/services.jpg" alt="Emergency Care">
+    <h3>24/7 Emergency Care</h3>
+    <p>Immediate medical attention at all hours.</p>
+  </div>
 
-<!-- PATIENT CARE -->
-<div class="card">
-  <h2>Patient Care</h2>
-  <img src="images/patient-care.jpg" alt="Patient Care">
-  <p class="center">Comfortable, safe and compassionate care for every patient.</p>
-</div>
+  <div class="service-card">
+    <img src="images/maternity-care.jpg" alt="Maternity Care">
+    <h3>Maternity & Child Care</h3>
+    <p>Safe delivery, antenatal and postnatal care.</p>
+  </div>
 
-<!-- MATERNITY CARE -->
-<div class="card">
-  <h2>Maternity Care</h2>
-  <img src="images/pregnant-women.jpg" alt="Maternity Care">
-  <p class="center">Specialized care for mothers and newborns.</p>
-</div>
+  <div class="service-card">
+    <img src="images/lab.jpg" alt="Laboratory Services">
+    <h3>Laboratory Services</h3>
+    <p>Accurate diagnostics with modern equipment.</p>
+  </div>
 
-</div>
+  <div class="service-card">
+    <img src="images/patient-care.jpg" alt="Outpatient Services">
+    <h3>Outpatient Services</h3>
+    <p>Consultation and follow-up with expert doctors.</p>
+  </div>
 
+</section>
+
+<!-- DOCTOR -->
+<section>
+  <h2>Our Doctor</h2>
+  <div class="service-card">
+    <img src="images/doctor-fathima.jpg" alt="Doctor Fathima">
+    <h3>Dr. Fathima</h3>
+    <p>Compassionate care with years of experience.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   © 2026 NMH Hospital. All Rights Reserved.
 </footer>
