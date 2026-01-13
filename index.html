@@ -1,93 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>NMH Hospital | Trusted Care</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>NMH Hospital | Multi-Specialty Care</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f5f7fa;
+  color:#333;
+}
+header{
+  background:#0a6ebd;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+header img{
+  width:90px;
+}
+nav{
+  background:#094a84;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+nav a{
+  color:white;
+  padding:12px 18px;
+  text-decoration:none;
+}
+nav a:hover{
+  background:#0a6ebd;
+}
+section{
+  padding:25px;
+  max-width:900px;
+  margin:auto;
+}
+h2{
+  color:#0a6ebd;
+}
+ul{
+  list-style:none;
+  padding:0;
+}
+ul li{
+  background:white;
+  margin:10px 0;
+  padding:14px;
+  border-radius:6px;
+  font-size:16px;
+}
+video{
+  width:100%;
+  border-radius:10px;
+}
+iframe{
+  width:100%;
+  height:350px;
+  border:0;
+  border-radius:10px;
+}
+.contact p{
+  font-size:16px;
+}
+.contact a{
+  text-decoration:none;
+  color:#0a6ebd;
+  font-weight:bold;
+}
+.whatsapp{
+  display:inline-block;
+  background:#25d366;
+  color:white;
+  padding:12px 18px;
+  border-radius:6px;
+  margin-top:10px;
+}
+footer{
+  background:#094a84;
+  color:white;
+  text-align:center;
+  padding:15px;
+  margin-top:30px;
+}
+.highlight{
+  background:#e8f2fc;
+  border-left:5px solid #0a6ebd;
+}
+</style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-  <img src="images/logo.png" alt="NMH Hospital Logo" class="logo">
+  <img src="images/logo.png" alt="NMH Hospital Logo">
   <h1>NMH Hospital</h1>
-  <p>Trusted Care for Mother & Child</p>
+  <p>Trusted Multi-Specialty Care for Your Family</p>
 </header>
 
-<!-- NAVIGATION -->
 <nav>
   <a href="#about">About</a>
-  <a href="#services">Services</a>
+  <a href="#specialities">Specialities</a>
   <a href="#video">Hospital Tour</a>
   <a href="#map">Location</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<!-- ABOUT -->
 <section id="about">
   <h2>About Us</h2>
   <p>
-    NMH Hospital is a modern healthcare center dedicated to providing
-    compassionate and professional medical services. We specialize in
-    maternity care, women’s health, and general medicine.
+    NMH Hospital is a trusted multi-specialty healthcare center providing
+    compassionate, advanced, and patient-focused medical services.
+    We are especially known for safe maternity care and normal deliveries.
   </p>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
-  <h2>Our Services</h2>
+<section id="specialities">
+  <h2>Our Specialities</h2>
   <ul>
-    <li>👶 Maternity Care</li>
-    <li>🤰 Antenatal & Postnatal Care</li>
-    <li>🩺 General Medicine</li>
-    <li>🧪 Laboratory Services</li>
-    <li>🚑 Emergency Care</li>
+    <li>🩺 <strong>General Physician</strong></li>
+    <li>🔪 <strong>General Surgery</strong></li>
+    <li>🦴 <strong>Orthopedic</strong></li>
+    <li>🧬 <strong>Urology Surgery</strong></li>
+    <li>👂 <strong>ENT Surgery</strong></li>
+    <li class="highlight">
+      👩‍⚕️ <strong>Main Senior OB-Gynecologist</strong><br>
+      Normal Delivery Specialist
+    </li>
   </ul>
 </section>
 
-<!-- VIDEO -->
 <section id="video">
   <h2>Hospital Tour</h2>
-
   <video controls playsinline>
     <source src="videos/hospital-tour.mp4" type="video/mp4">
     Your browser does not support the video.
   </video>
-
 </section>
 
-<!-- MAP -->
 <section id="map">
   <h2>Our Location</h2>
-
   <iframe
     src="https://www.google.com/maps?q=NMH+Hospital+Vaniyambadi&output=embed"
-    allowfullscreen=""
-    loading="lazy">
+    loading="lazy"
+    allowfullscreen>
   </iframe>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="contact">
   <h2>Contact Us</h2>
 
-  <p><i class="fa-solid fa-phone"></i> +91 90431 55002</p>
+  <p>
+    <i class="fa-solid fa-mobile-screen"></i>
+    <a href="tel:+919043155002">+91 90431 55002</a>
+  </p>
+
+  <p>
+    <i class="fa-solid fa-phone"></i>
+    <a href="tel:04174291236">04174-291236</a>
+  </p>
+
+  <p>
+    <i class="fa-solid fa-clock"></i>
+    <strong>Working Hours:</strong><br>
+    Monday – Sunday<br>
+    24 × 7 Emergency Available
+  </p>
 
   <a class="whatsapp" href="https://wa.me/919043155002" target="_blank">
     <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
   </a>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>© 2026 NMH Hospital. All Rights Reserved.</p>
+  © 2026 NMH Hospital. All Rights Reserved.
 </footer>
 
 </body>
