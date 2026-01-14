@@ -8,8 +8,8 @@
 <style>
 body{
   margin:0;
-  font-family: Arial, Helvetica, sans-serif;
-  background:#f6f8fb;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4f6f9;
   color:#333;
 }
 
@@ -17,7 +17,7 @@ body{
 .top-bar{
   background:#0b5ed7;
   color:#fff;
-  padding:8px 12px;
+  padding:10px;
   display:flex;
   justify-content:space-between;
   font-size:14px;
@@ -32,13 +32,13 @@ body{
 header{
   background:#fff;
   text-align:center;
-  padding:15px;
+  padding:20px;
 }
-.logo{
+header img{
   width:110px;
 }
 header h1{
-  margin:8px 0 2px;
+  margin:10px 0 4px;
   color:#0b5ed7;
 }
 header p{
@@ -49,13 +49,13 @@ header p{
 /* SECTION */
 section{
   background:#fff;
-  margin:12px;
+  margin:14px;
   padding:20px;
-  border-radius:10px;
+  border-radius:12px;
 }
 h2{
   color:#0b5ed7;
-  margin-bottom:15px;
+  margin-bottom:14px;
 }
 
 /* SPECIALITIES */
@@ -80,9 +80,9 @@ h2{
 }
 .care-box img{
   width:100%;
-  height:140px;
+  height:150px;
   object-fit:cover;
-  border-radius:8px;
+  border-radius:10px;
 }
 .care-box p{
   margin-top:8px;
@@ -95,7 +95,8 @@ h2{
 }
 .doctor img{
   width:160px;
-  border-radius:10px;
+  border-radius:12px;
+  margin-bottom:10px;
 }
 
 /* MAP */
@@ -103,7 +104,7 @@ h2{
   width:100%;
   height:300px;
   border:0;
-  border-radius:10px;
+  border-radius:12px;
 }
 
 /* FOOTER */
@@ -125,24 +126,24 @@ footer a{
 
 <!-- TOP CONTACT -->
 <div class="top-bar">
-  <div>📞 <a href="tel:04174291236">04174 291236</a></div>
-  <div>💬 <a href="https://wa.me/919999999999">WhatsApp</a></div>
+  <div>📞 <a href="tel:04174291236">04174-291236</a></div>
+  <div>💬 <a href="https://wa.me/919043155002">WhatsApp</a></div>
 </div>
 
 <!-- HEADER -->
 <header>
-  <img src="images/logo.jpg" class="logo" alt="NMH Hospital Logo">
+  <img src="images/logo.jpg" alt="NMH Hospital">
   <h1>NMH Hospital</h1>
-  <p>Trusted Multi-Specialty Care</p>
+  <p>Trusted Multispeciality Care</p>
 </header>
 
 <!-- ABOUT -->
 <section>
   <h2>About Us</h2>
   <p>
-    NMH Hospital is a trusted multi-specialty healthcare center providing
-    compassionate and quality medical services with special focus on
-    maternity and family care.
+    NMH Hospital is a trusted multi-speciality healthcare center providing
+    ethical, compassionate and affordable medical services with special
+    focus on maternity care and normal deliveries.
   </p>
 </section>
 
@@ -160,7 +161,7 @@ footer a{
   </ul>
 </section>
 
-<!-- CARE -->
+<!-- OUR CARE (WITH PHOTOS) -->
 <section>
   <h2>Our Care</h2>
   <div class="care-grid">
@@ -186,28 +187,37 @@ footer a{
 <!-- DOCTOR -->
 <section class="doctor">
   <h2>Senior Doctor</h2>
-  <img src="images/doctor-fathima.jpg" alt="Senior OB Gynecologist">
+  <img src="images/doctor-fathima.jpg">
   <p><strong>Senior OB-Gynecologist</strong><br>Normal Delivery Specialist</p>
 </section>
 
-<!-- MAP -->
+<!-- LOCATION -->
 <section class="map">
   <h2>Location</h2>
+  <p>
+    NMH Hospital<br>
+    No.2941, Oosi Toopu,<br>
+    Behind Nethaji Nagar, Eidgha,<br>
+    Amburpet, Vaniyambadi,<br>
+    Tamil Nadu – 635752
+  </p>
+
+  <!-- ADDRESS BASED MAP (SAFEST) -->
   <iframe
-    src="https://www.google.com/maps?q=NMH%20Hospital%20Vaniyambadi&output=embed">
+    src="https://www.google.com/maps?q=No.2941%20Oosi%20Toopu%20Amburpet%20Vaniyambadi&output=embed">
   </iframe>
+
+  <p style="margin-top:10px;">
+    <a href="https://www.google.com/maps/search/?api=1&query=No.2941+Oosi+Toopu+Amburpet+Vaniyambadi" target="_blank">
+      📍 Open in Google Maps
+    </a>
+  </p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>
-    NMH Hospital<br>
-    No.2941, Oosi Toopu, Behind Nethaji Nagar, Eidgha,<br>
-    Amburpet, Vaniyambadi, Tamil Nadu – 635752
-  </p>
-  <p>
-    📞 <a href="tel:04174291236">04174 291236</a>
-  </p>
+  <p>📞 <a href="tel:04174291236">04174-291236</a> | 💬 WhatsApp</p>
+  <p>© NMH Hospital. All Rights Reserved.</p>
 </footer>
 
 </body>
